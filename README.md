@@ -20,17 +20,18 @@ cd /opt/docker
 chmod +x docker-install.sh
 ./docker-install.sh -u rsignell
 ```
-6. Edit the Let's encrypt script, replacing the [CERTS line](https://github.com/rsignell-usgs/docker-template/blob/master/nginx/do_get#L2) with your endpoint
+6. Edit the Let's encrypt script, replacing the [CERTS line](https://github.com/rsignell-usgs/docker-template/blob/master/nginx/do_get#L2) with your endpoint IP (e.g. "js-168-110.jetstream.org")
 ```
 cd /opt/docker
 cd nginx
 chmod +x do_get
 vi do_get
 ```
-7. After modifying the CERTS and EMAIL lines in do_get, run it:
+7. After modifying the CERTS and EMAIL lines in do_get, run the script:
 ```
 ./do_get
 ```
+8. Stop the running docker container `CTRL-C bg` and then kill the docker container `docker rm -f cert`
 8. Grep for all the places to change the domain name
 ```
 cd /opt/docker
