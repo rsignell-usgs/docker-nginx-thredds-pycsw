@@ -1,0 +1,175 @@
+{
+    "corsDomains": [
+        "corsproxy.com",
+        "programs.communications.gov.au",
+        "www.asris.csiro.au",
+        "mapsengine.google.com"
+    ],
+    "homeCamera": {
+        "west": -124,
+        "south": 24,
+        "east": -66,
+        "north": 50
+    },
+    "services": [],
+    "catalog": [
+        {
+            "name": "Base Data Layers",
+            "isOpen": true,
+            "type": "group",
+            "preserveOrder": true,
+            "items": [
+                {
+                    "name": "US Topo Availability",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/US_Topo_Availability/MapServer"
+                },
+                {
+                    "name": "Geographic Names",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/geonames/MapServer"
+                },
+                {
+                    "name": "Structures",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/structures/MapServer"
+                },
+                {
+                    "name": "Transportation",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/transportation/MapServer"
+                },
+                {
+                    "name": "Governmental Unit Boundaries",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/govunits/MapServer"
+                },
+                {
+                    "name": "Map Indices",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/map_indices/MapServer"
+                },
+                {
+                    "name": "Hydrography (NHD)",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/nhd/MapServer"
+                },
+                {
+                    "name": "Hydrography (NHD)",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/nhd/MapServer"
+                },
+                {
+                    "name": "National Land Cover Database (NLCD)",
+                    "type": "esri-mapServer-group",
+                    "url": "http://raster.nationalmap.gov/arcgis/rest/services/LandCover/USGS_EROS_LandCover_NLCD/MapServer"
+                },
+                {
+                    "name": "Elevation Index - 3DEP",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer"
+                },
+                {
+                    "name": "Elevation Contours - Small Scale",
+                    "type": "esri-mapServer-group",
+                    "url": "http://basemap.nationalmap.gov/arcgis/rest/services/TNM_Contours/MapServer"
+                },
+                {
+                    "name": "Imagery - 1 meter",
+                    "type": "esri-mapServer-group",
+                    "url": "http://raster.nationalmap.gov/arcgis/rest/services/Orthoimagery/USGS_EROS_Ortho_NAIP/ImageServer"
+                },
+                {
+                    "name": "Imagery - 1 foot",
+                    "type": "esri-mapServer-group",
+                    "url": "http://raster.nationalmap.gov/arcgis/rest/services/Orthoimagery/USGS_EROS_Ortho_1Foot/ImageServer"
+                },
+                {
+                    "name": "Reference Polygons",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.nationalmap.gov/arcgis/rest/services/selectable_polygons/MapServer"
+                }
+
+            ]
+        },
+        {
+            "name": "Natural Hazards",
+            "type": "group",
+            "preserveOrder": true,
+            "items": [
+                {
+                    "name": "USGS US Hazards",
+                    "type": "esri-mapServer-group",
+                    "url": "http://igems.doi.gov/arcgis/rest/services/igems_haz/MapServer"
+                },
+                {
+                    "name": "USGS Stream Flow, Weather & Tide Stations",
+                    "type": "esri-mapServer-group",
+                    "url": "http://igems.doi.gov/arcgis/rest/services/igems_info/MapServer"
+                },
+                {
+                    "name": "FEMA National Flood Hazards",
+                    "type": "esri-mapServer-group",
+                    "url": "https://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer"
+                },
+                {
+                    "name": "NEXRAD Weather",
+                    "type": "esri-mapServer-group",
+                    "url": "http://dtc-sci02.esri.com/arcgis/rest/services/ArcGISForWeather/Nexrad/MapServer"
+                },
+                {
+                    "name": "NGA US National Grid",
+                    "type": "esri-mapServer-group",
+                    "url": "http://maps1.arcgisonline.com/arcgis/rest/services/NGA_US_National_Grid/MapServer"
+                }
+            ]
+        },
+        {
+            "name": "Other Featured Data",
+            "type": "group",
+            "preserveOrder": true,
+            "items": [
+                {
+                    "name": "Scanned Topo Maps from USA Topo",
+                    "type": "esri-mapServer-group",
+                    "url": "http://services.arcgisonline.com/arcgis/rest/services/USA_Topo_Maps/MapServer"
+                },
+                {
+                    "name": "USGS Ecosystems",
+                    "type": "esri-mapServer-group",
+                    "url": "http://rmgsc.cr.usgs.gov/arcgis/rest/services/ecosys_US/MapServer"
+                },
+                {
+                    "name": "USGS Protected Area Owner (PADUS)",
+                    "type": "esri-mapServer-group",
+                    "url": "http://gis1.usgs.gov/arcgis/rest/services/gap/PADUS_Owner/MapServer"
+                },
+                {
+                    "name": "USGS Protected Area Conservation Status (PADUS)",
+                    "type": "esri-mapServer-group",
+                    "url": "http://gis1.usgs.gov/arcgis/rest/services/gap/PADUS_Status/MapServer"
+                },
+                {
+                    "name": "USGS GAP Land Cover",
+                    "type": "esri-mapServer-group",
+                    "url": "http://gis1.usgs.gov/arcgis/rest/services/gap/GAP_Land_Cover_NVC_Formation_Landuse/MapServer"
+                },
+                {
+                    "name": "FWS Wetlands",
+                    "type": "esri-mapServer-group",
+                    "url": "http://107.20.228.18/arcgis/rest/services/Wetlands/MapServer"
+                },
+                {
+                    "name": "BLM Public Land Survey System (PLSS)",
+                    "type": "esri-mapServer-group",
+                    "url": "http://www.geocommunicator.gov/arcgis/rest/services/PLSS/MapServer"
+                },
+                {
+                    "name": "National Park Service (NPS) Boundaries",
+                    "type": "esri-mapServer-group",
+                    "url": "http://mapservices.nps.gov/arcgis/rest/services/LandResourcesDivisionTractAndBoundaryService/MapServer"
+                }
+            ]
+        }
+    ]
+}
