@@ -1,0 +1,155 @@
+{
+    "viewerMode": "2d",
+    "initialCamera": {
+    "west": -180,
+    "east": 180,
+    "north": 50,
+    "south": 0
+  },
+    "homeCamera": {
+    "west": -180,
+    "east": 180,
+    "north": 80,
+    "south": -80
+  },
+    "catalog": [
+        {
+            "name": "Tide Gauge Locations",
+            "type": "csv",
+            "url": "https://raw.githubusercontent.com/zdefne-usgs/sweet_slr/master/major_stations.csv",
+            "description": "Sea level change data at major stations as presented in: Sweet, W.V., R.E. Kopp, C. P. Weaver, J. Obeysekera, R. M. Horton, E.R. Thieler and C. Zervas (2017), Global and Regional Sea Level Rise Scenarios for the United States. NOAA Tech. Rep. NOS CO-OPS 83.",
+            "isEnabled": true,
+            "isLoading" : true,
+            "isWaitingForDisclaimer" : true,
+            "metadataUrl" : "https://tidesandcurrents.noaa.gov/publications/techrpt83_Global_and_Regional_SLR_Scenarios_for_the_US_final.pdf",
+            "dateFormat": {
+            "timelineTic" : " Year yyyy",
+            "currentTime" : " - Year yyyy"
+            },
+            "hideSource" : true,
+            "initialTimeSource" : "2100-01-01",
+            "idColumns": ["id"],
+            //"featureInfoTemplate" : {"template": "{{SPEED}} m/s", "formats": {"SPEED": {"maximumFractionDigits": 2}}}
+            "featureInfoTemplate" : {
+                "template" : "<table style=width:100%><th><tr><td><body>{{terria.timeSeries.title}}<body></td></tr></th><tr><td><chart x-column={{terria.timeSeries.xName}} y-column={{terria.timeSeries.yName}} id={{terria.timeSeries.id}} column-units={{terria.timeSeries.units}}>{{terria.timeSeries.data}}</chart></td></tr></table>",
+            },
+            "tableStyle": { 
+                "dataVariable": "0.3-MED",
+                "colorBins": 9, 
+                "_comment": "colorMap : black-red",
+                "columns": {
+                    "id": {
+                        "type": "HIDDEN"
+                    },
+                    "BackgroundRSLrate": {
+                        "name": "Background.RSL.rate.(mm/yr)",
+                        "units": "mm/yr",
+                        "colorBinMethod": "quantile",
+                     },
+                    "0.3-MED": {
+                        "name": "GMSL.0.3m.MED.(m)",
+                        "units": "m",
+                        "colorBinMethod": "quantile",
+                     },
+                    "0.3-LOW": {
+                        "name": "GMSL.0.3m.LOW.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "0.3-HIGH": {
+                        "name": "GMSL.0.3m.HIGH.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "0.5-MED": {
+                        "name": "GMSL.0.5m.MED.(m)",
+                        "units": "m",
+                        "colorBinMethod": "quantile",
+                     },
+                    "0.5-LOW": {
+                        "name": "GMSL.0.5m.LOW.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "0.5-HIGH": {
+                        "name": "GMSL.0.5m.HIGH.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "1.0-MED": {
+                        "name": "GMSL.1.0m.MED.(m)",
+                        "units": "m",
+                        "colorBinMethod": "quantile",
+                     },
+                    "1.0-LOW": {
+                        "name": "GMSL.1.0m.LOW.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "1.0-HIGH": {
+                        "name": "GMSL.1.0m.HIGH.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "1.5-MED": {
+                        "name": "GMSL.1.5m.MED.(m)",
+                        "units": "m",
+                        "colorBinMethod": "quantile",
+                     },
+                    "1.5-LOW": {
+                        "name": "GMSL.1.5m.LOW.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "1.5-HIGH": {
+                        "name": "GMSL.1.5m.HIGH.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "2.0-MED": {
+                        "name": "GMSL.2.0m.MED.(m)",
+                        "units": "m",
+                        "colorBinMethod": "quantile",
+                     },
+                    "2.0-LOW": {
+                        "name": "GMSL.2.0m.LOW.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "2.0-HIGH": {
+                        "name": "GMSL.2.0m.HIGH.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "2.5-MED": {
+                        "name": "GMSL.2.5m.MED.(m)",
+                        "units": "m",
+                        "colorBinMethod": "quantile",
+                     },
+                    "2.5-LOW": {
+                        "name": "GMSL.2.5m.LOW.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                    "2.5-HIGH": {
+                        "name": "GMSL.2.5m.HIGH.(m)",
+                        "units": "m",
+                        "chartLineColor": "#bfbfbf",
+                        "colorBinMethod": "quantile",
+                     },
+                }
+            },
+        },
+    ],
+}

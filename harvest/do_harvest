@@ -1,0 +1,9 @@
+#!/bin/bash
+source activate ioos
+mkdir /opt/docker/pycsw/force/iso_records
+
+python /opt/docker/harvest/usgs-cmg-portal/catalog_harvest/get_daily_iso.py
+python /opt/docker/harvest/usgs-cmg-portal/catalog_harvest/get_ncml_daily_iso.py
+
+# for now make all the files 777 so docker can remove
+chmod -R 777 /opt/docker/pycsw/force/iso_records

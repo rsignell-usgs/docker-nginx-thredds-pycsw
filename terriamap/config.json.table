@@ -1,0 +1,42 @@
+{
+    initializationUrls: [
+        "terria",
+        "sweet_major"
+    ],
+    parameters: {
+        disableSplitter: true,
+        autoPlay: false,
+        bingMapsKey: "AkaOmRFtjAb71cXgLwAGtLbj2RpkPKtVqAIroFQsocfurCBILxIeAWPkil7hhRy_",
+        googleUrlShortenerKey: null,
+        googleAnalyticsKey: null,
+        googleAnalyticsOptions: null,
+        disclaimer: {
+            text: "Disclaimer: The suggestions and illustrations included in this map are intended to improve sea level change awareness and preparedness; however, they do not guarantee the safety of an individual or structure. The contributors and sponsors of this product do not assume liability for any injury, death, property damage, or other effects of the sea level change. This map must not be used for navigation or precise spatial analysis. ",
+        },   
+        printDisclaimer:{
+            text: "Disclaimer: The suggestions and illustrations included in this map are intended to improve sea level change awareness and preparedness; however, they do not guarantee the safety of an individual or structure. The contributors and sponsors of this product do not assume liability for any injury, death, property damage, or other effects of the sea level change. This map must not be used for navigation or precise spatial analysis.",
+        },
+        globalDisclaimer: {
+            confirmationRequired: true,
+            buttonTitle: "I agree",
+            title: "Disclaimer: ",
+            // If the current browser location is not prod, or is dev, then show a "not the real site" warning.
+            // The text of that is in lib/Views/DevelopmentDisclaimerPreamble.html
+            //prodHostRegex: ".\\.gov$",
+            //devHostRegex: "\\b(staging|preview|test|dev)\\.",
+           //enableOnLocalhost: false // If false, don't show this when running on localhost
+        },  
+        developerAttribution: {
+            text: "U.S. Geological Survey",
+            link: "http://www.usgs.gov"
+        },
+        appName: "SLC Map",
+        brandBarElements: [
+            "<table cellspacing=\"20\"><tr><td padding=\"10px\"> <a target=\"_blank\" href=\"https://www.usgs.gov/\"><img vertical-align=\"middle\"  src=\"https://github.com/zdefne-usgs/TerriaMap/blob/master/wwwroot/images/USGS_brand_logo.png?raw=true\" style=\"height:43;border:0\" title=\"U.S. Geological Survey\" /></a></td><td> <a target=\"_blank\" href=\"https://www.globalchange.gov/\"><img src=\"https://github.com/zdefne-usgs/TerriaMap/blob/master/wwwroot/images/USGCRP_brand_logo.png?raw=true\" style=\"height:43;border:0;\" title=\"U.S. Global Change Research Program\" /></a></td><td> <a target=\"_blank\" href=\"http://www.noaa.gov//\"><img src=\"https://github.com/zdefne-usgs/TerriaMap/blob/master/wwwroot/images/NOAA_brand_logo.png?raw=true\" style=\"height:43;border:0;\" title=\"National Oceanic and Atmospheric Administration\" /></a></td><td> <a target=\"_blank\" href=\"http://www.terria.io//\"><img vertical-align=\"top\"  src=\"https://github.com/zdefne-usgs/TerriaMap/blob/master/wwwroot/images/branding.png?raw=true\" style=\"height:43;width:53;border:0;\" title=\"Terria\" /></a></td></tr></table>"
+        ],
+        supportEmail: "rsignell@usgs.gov",
+        proj4ServiceBaseUrl: "proj4def/",
+        //feedbackUrl: "feedback",
+    }
+}
+

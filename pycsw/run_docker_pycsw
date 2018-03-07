@@ -1,0 +1,10 @@
+docker run \
+    -d \
+    -p 8000:8000 \
+    -v /opt/docker/pycsw/usgs-cmg.cfg:/opt/pycsw/default.cfg \
+    -v /opt/docker/pycsw/force:/force \
+    -v /opt/docker/pycsw/export:/export \
+    -v /opt/docker/pycsw/store:/store \
+    -v /opt/docker/pycsw/database:/database \
+    --name pycsw \
+    axiom/docker-pycsw

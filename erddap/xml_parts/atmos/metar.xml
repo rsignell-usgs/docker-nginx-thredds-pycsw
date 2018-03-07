@@ -1,0 +1,2084 @@
+<dataset type="EDDTableFromMultidimNcFiles" datasetID="netcdf_d8f6_674a_1427" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/sand/usgs/users/rsignell/data/atmos/metar/netcdf/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <removeMVRows>true</removeMVRows>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    <defaultGraphQuery>longitude,latitude,temperature&amp;time&gt;=max(time)-1hour</defaultGraphQuery> 
+
+    <!-- sourceAttributes>
+        <att name="cdlDate">20160212</att>
+        <att name="Conventions">MADIS surface observations, v1.0</att>
+        <att name="creator_email">madis-support@noaa.gov</att>
+        <att name="creator_name">Michael F. Barth</att>
+        <att name="creator_url">https://madis.ncep.noaa.gov</att>
+        <att name="DD_long_name">QC data descriptor model:  QC summary values</att>
+        <att name="DD_reference">AWIPS Technique Specification Package (TSP) 88-21-R2</att>
+        <att name="DD_value_B">Included in reject list</att>
+        <att name="DD_value_C">Passed QC stage 1</att>
+        <att name="DD_value_G">Included in accept list</att>
+        <att name="DD_value_K">Passed QC stages 1, 2, 3, and 4</att>
+        <att name="DD_value_k">Passed QC stage 1,2, and 3, failed stage 4 </att>
+        <att name="DD_value_Q">Passed QC stage 1, but failed stages 2 or 3 </att>
+        <att name="DD_value_S">Passed QC stages 1 and 2</att>
+        <att name="DD_value_V">Passed QC stages 1, 2 and 3</att>
+        <att name="DD_value_X">Failed QC stage 1</att>
+        <att name="DD_value_Z">No QC applied</att>
+        <att name="DD_values">Z,C,S,V,X,Q,K,k,G, or B</att>
+        <att name="endTime">2017-03-21T19:44:59Z</att>
+        <att name="fileEndOffset" type="int">2699</att>
+        <att name="filePeriod" type="int">3600</att>
+        <att name="geospatial_lat_max">85</att>
+        <att name="geospatial_lat_min">-5</att>
+        <att name="geospatial_lon_max">5</att>
+        <att name="geospatial_lon_min">-180</att>
+        <att name="history">revision: 1.5; date: 2016/02/12; author: benjamin</att>
+        <att name="ICA_Bit1Set">Master bit - at least 1 check applied</att>
+        <att name="ICA_BitiSet">IC check # applied</att>
+        <att name="ICA_LeastSignificantBit">bit1</att>
+        <att name="ICA_long_name">IC applied model:  applied word definition</att>
+        <att name="ICA_NoBitsSet">No IC applied</att>
+        <att name="ICA_reference">IC check #&#39;s defined in IC check table</att>
+        <att name="ICR_Bit1Set">Master bit - at least 1 check applied</att>
+        <att name="ICR_BitiSet">IC check # applied</att>
+        <att name="ICR_LeastSignificantBit">bit1</att>
+        <att name="ICR_long_name">IC results Model:  results word definition</att>
+        <att name="ICR_NoBitsSet">No IC applied</att>
+        <att name="ICR_reference">IC check #&#39;s defined in IC check table</att>
+        <att name="id">MADIS_METAR</att>
+        <att name="idVariables">stationName</att>
+        <att name="keywords">Climate;Meteorological;Surface Observation;Weather;Land</att>
+        <att name="keywords_vocabulary">http://www.wmo.int/web/www/metadata/WMO-keywords.html</att>
+        <att name="license">To access MADIS data fill out the application at https://madis.ncep.noaa.gov/data_application.shtml.  Some of the MADIS data are restricted.  See https://madis.ncep.noaa.gov/madis_restrictions.shtml for details.</att>
+        <att name="naming_authority">noaa.gov</att>
+        <att name="processing_level">Two categories of QC checks, static and dynamic, are applied to most of the observations available in this dataset. The static QC checks are single-station, single-time checks which, as such, are unaware of the previous and current meteorological or hydrologic situation described by other observations and grids. Checks falling into this category include validity and internal consistency. Although useful for locating extreme outliers in the observational database, the static checks can have difficulty with statistically reasonable, but invalid data. To address these difficulties, dynamic checks which refine the QC information by taking advantage of other available hydrometeorological information. The dynamic QC checks include temporal consistency and spatial consistency. No data is filtered by the QC checks. Instead, the QC results are contained in the file, and the user can choose whether or not to filter data based on the QC.</att>
+        <att name="project">Meteorological Assimilation Data Ingest System (MADIS)</att>
+        <att name="QCA_Bit10Set">Kalman Filter applied</att>
+        <att name="QCA_Bit1Set">Master bit - at least 1 check applied</att>
+        <att name="QCA_Bit2Set">Validity check applied</att>
+        <att name="QCA_Bit3Set">Position Consistency check applied</att>
+        <att name="QCA_Bit4Set">Internal Consistency check applied</att>
+        <att name="QCA_Bit5Set">Temporal Consistency (TC) check applied</att>
+        <att name="QCA_Bit6Set">Statistical Spatial Consistency check applied</att>
+        <att name="QCA_Bit7Set">Spatial Consistency check applied</att>
+        <att name="QCA_Bit8Set">Forecast Model Consistency check applied</att>
+        <att name="QCA_Bit9Set">Statistical Model Consistency check applied</att>
+        <att name="QCA_LeastSignificantBit">bit1</att>
+        <att name="QCA_long_name">QC applied model:  applied word definition</att>
+        <att name="QCA_NoBitsSet">No QC applied</att>
+        <att name="QCA_reference1">AWIPS TSP 88-21_R2</att>
+        <att name="QCA_reference2">10th Met Obs and Inst, Paper FA5.7, Phoenix, 1998</att>
+        <att name="QCA_reference3">14th IIPS, Paper FA8.16, Phoenix, 1998</att>
+        <att name="QCD_long_name">QC departure model:  array definition</att>
+        <att name="QCD_pos1">Average ob departure from QC check estimates</att>
+        <att name="QCD_pos10">Departure from Kalman filter estimate</att>
+        <att name="QCD_pos2">Departure from validity check estimate</att>
+        <att name="QCD_pos3">Departure from position consistency estimate</att>
+        <att name="QCD_pos4">Departure from internal consistency estimate</att>
+        <att name="QCD_pos5">Departure from temporal consistency estimate</att>
+        <att name="QCD_pos6">Departure from statistical spatial consistency estimate</att>
+        <att name="QCD_pos7">Departure from spatial consistency estimate</att>
+        <att name="QCD_pos8">Departure from forecast model estimate</att>
+        <att name="QCD_pos9">Departure from statistical model estimate</att>
+        <att name="QCD_reference1">AWIPS TSP 88-21-R2</att>
+        <att name="QCD_reference2">10th Met Obs and Inst, Paper FA5.7, Phoenix, 1998</att>
+        <att name="QCD_reference3">14th IIPS, Paper FA8.16, Phoenix, 1998</att>
+        <att name="QCR_Bit10Set">Kalman Filter failed</att>
+        <att name="QCR_Bit1Set">Master bit - at least 1 check failed</att>
+        <att name="QCR_Bit2Set">Validity check failed</att>
+        <att name="QCR_Bit3Set">Position Consistency check failed</att>
+        <att name="QCR_Bit4Set">Internal Consistency (IC) check failed</att>
+        <att name="QCR_Bit5Set">Temporal Consistency check failed</att>
+        <att name="QCR_Bit6Set">Statistical Spatial Consistency  check failed</att>
+        <att name="QCR_Bit7Set">Spatial Consistency check failed</att>
+        <att name="QCR_Bit8Set">Forecast Model Consistency check failed</att>
+        <att name="QCR_Bit9Set">Statistical Model Consistency check failed</att>
+        <att name="QCR_LeastSignificantBit">bit1</att>
+        <att name="QCR_long_name">QC results model:  results word definition</att>
+        <att name="QCR_NoBitsSet">No QC failures</att>
+        <att name="QCR_reference1">AWIPS TSP 88-21_R2</att>
+        <att name="QCR_reference2">10th Met Obs and Inst, Paper FA5.7, Phoenix, 1998</att>
+        <att name="QCR_reference3">14th IIPS, Paper FA8.16, Phoenix, 1998</att>
+        <att name="QCStage_long_name">automated QC checks contained in each stage</att>
+        <att name="QCStage_reference">AWIPS TSP 88-21_R2</att>
+        <att name="QCStage_value_1">Validity and Position Consistency Check</att>
+        <att name="QCStage_value_2">Internal, Temporal, and Model Consistency Checks</att>
+        <att name="QCStage_value_3">Spatial and Statistical Spatial Consistency Checks</att>
+        <att name="QCStage_value_4">Kalman Filter</att>
+        <att name="QCStage_values">1, 2, 3, or 4</att>
+        <att name="standard_name_vocabulary">CF</att>
+        <att name="startTime">2017-03-21T18:45:00Z</att>
+        <att name="stationDescriptionVariable">locationName</att>
+        <att name="stationIdVariable">stationName</att>
+        <att name="stationLocationVariables">latitude,longitude,elevation</att>
+        <att name="summary">The MADIS meteorological surface dataset includes quality-controlled reports from many observing networks run by different providers. Most national-scale networks in North America that report surface conditions are included. Over land, this includes all stations that report standard METARs (ASOS, AWOS, non-automated stations) or SAOs (Canadian stations), as well as modernized (i.e., automated) National Weather Service Cooperative Observer reports. Maritime reports are also available, including the Coastal Marine Automated Network (C-MAN), fixed and drifting buoys, and ship reports. The MADIS meteorological surface dataset also contains a unique collection of thousands of mesonet stations from local, state, and federal agencies, and private firms. One of these mesonets, GPSMET, includes water vapor observations from geo-positioning satellites (GPS) in addition to surface observations.  This file is a subset of the MADIS meteorological surface dataset, and includes Integrated Mesonet data.  For more info see https://madis.ncep.noaa.gov.</att>
+        <att name="thredds_data_type">Station</att>
+        <att name="timeVariables">timeObs</att>
+        <att name="title">MADIS - Meteorological Surface - METAR</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+    -->
+    <addAttributes>
+        <att name="cdm_timeseries_variables">stationName, longitude, latitude</att>
+        <att name="subsetVariables">stationName, longitude, latitude</att>
+        <att name="cdm_data_type">timeSeries</att>
+        <att name="Conventions">MADIS surface observations, v1.0, COARDS, CF-1.6, ACDD-1.3</att>
+        <att name="infoUrl">https://madis.ncep.noaa.gov</att>
+        <att name="institution">NOAA</att>
+        <att name="keywords">1-h, 24-h, 24h, 3-h, 6-h, air, air_pressure_at_sea_level, air_temperature, alphanumeric, altimeter, altimeter_setting, altimeterDD, altimeterQCA, altimeterQCR, altitude, amount, applied, atmosphere,
+Atmosphere &gt; Air Quality &gt; Visibility,
+Atmosphere &gt; Altitude &gt; Station Height,
+Atmosphere &gt; Atmospheric Pressure &gt; Atmospheric Pressure Measurements,
+Atmosphere &gt; Atmospheric Pressure &gt; Pressure Tendency,
+Atmosphere &gt; Atmospheric Pressure &gt; Sea Level Pressure,
+Atmosphere &gt; Atmospheric Pressure &gt; Static Pressure,
+Atmosphere &gt; Atmospheric Temperature &gt; Air Temperature,
+Atmosphere &gt; Atmospheric Temperature &gt; Dew Point Temperature,
+Atmosphere &gt; Atmospheric Temperature &gt; Surface Air Temperature,
+Atmosphere &gt; Atmospheric Water Vapor &gt; Dew Point Temperature,
+Atmosphere &gt; Atmospheric Winds &gt; Surface Winds,
+Atmosphere &gt; Precipitation &gt; Snow,
+atmospheric, automated, autoStationType, base, biology, c-man, celsius, change, character, climate;meteorological;surface, cman, coastal, control, corrected, correction, cover, cryosphere,
+Cryosphere &gt; Snow/Ice &gt; Snow Depth,
+data, degree, depth, dew, dew point, dew_point_temperature, dewpoint, dewpointDD, dewpointICA, dewpointICR, dewpointQCA, dewpointQCR, direction, distribution, dpFromTenths, elevation, first, firstOverflow, geographic, global, globalInventory, gps, gust, height, hour, hydrosphere, ice, ice distribution, identification, identifier, ids, indicator, inv, inventory, invTime, isOverflow, latitude, layer, level, locationName, longitude, madis, man, marine, max, maximum, maximum_24h_air_temperature, maxTemp24Hour, maxTemp24HourDD, maxTemp24HourQCA, maxTemp24HourQCR, measurements, message, metar, meteorological, meteorology, min, minimum, minimum_24h_air_temperature, minTemp24Hour, minTemp24HourDD, minTemp24HourQCA, minTemp24HourQCR, national, networks, noaa, nStaticIds, numeric, nws, observation, observation;weather;land, organisation, overflow, point, positioning, precip1Hour, precip1HourDD, precip1HourICA, precip1HourICR, precip1HourQCA, precip1HourQCR, precip24Hour, precip24HourDD, precip24HourICA, precip24HourICR, precip24HourQCA, precip24HourQCR, precip3Hour, precip3HourDD, precip3HourICA, precip3HourICR, precip3HourQCA, precip3HourQCR, precip6Hour, precip6HourDD, precip6HourICA, precip6HourICR, precip6HourQCA, precip6HourQCR, precipitation, present, pressChange3Hour, pressChange3HourDD, pressChange3HourICA, pressChange3HourICR, pressChange3HourQCA, pressChange3HourQCR, pressChangeChar, pressure, presWeather, prev, prevRecord, quality, rain, rainfall, raw, rawMETAR, record, report, reportType, results, sea, seaLevelPress, seaLevelPressDD, seaLevelPressICA, seaLevelPressICR, seaLevelPressQCA, seaLevelPressQCR, seawater, seconds, secondsStage1_2, secondsStage3, service, setting, sky, skyCover, skyLayerBase, snow, snowCover, snowCoverDD, snowCoverQCA, snowCoverQCR, speed, stage1, stage3, static, station, stationName, statistics, summary, surface, surface_snow_amount, system, temperature, temperatureDD, temperatureICA, temperatureICR, temperatureQCA, temperatureQCR, tempFromTenths, tendency, tendency_of_air_pressure, tenths, terrestrial,
+Terrestrial Hydrosphere &gt; Snow/Ice &gt; Snow Depth,
+time, timeNominal, timeObs, timeReceived, type, value, vapor, visibility, visibility_in_air, visibilityDD, visibilityICA, visibilityICR, visibilityQCA, visibilityQCR, water, weather, wind, wind_from_direction, wind_gust, wind_speed, windDir, windDirDD, windDirICA, windDirICR, windDirQCA, windDirQCR, windGust, windGustDD, windGustQCA, windGustQCR, winds, windSpeed, windSpeedDD, windSpeedICA, windSpeedICR, windSpeedQCA, windSpeedQCR, wmo, wmoId, word, world</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="summary">MADIS - Meteorological Surface - METAR. The MADIS meteorological surface dataset includes quality-controlled reports from many observing networks run by different providers. Most national-scale networks in North America that report surface conditions are included. Over land, this includes all stations that report standard METARs (ASOS, AWOS, non-automated stations) or SAOs (Canadian stations), as well as modernized (i.e., automated) National Weather Service Cooperative Observer reports. Maritime reports are also available, including the Coastal Marine Automated Network (Coastal Marine Automated Networks (C-MAN)), fixed and drifting buoys, and ship reports. The MADIS meteorological surface dataset also contains a unique collection of thousands of mesonet stations from local, state, and federal agencies, and private firms. One of these mesonets, GPSMET, includes water vapor observations from geo-positioning satellites (Global Positioning System (GPS)) in addition to surface observations.  This file is a subset of the MADIS meteorological surface dataset, and includes Integrated Mesonet data.  For more info see https://madis.ncep.noaa.gov.</att>
+        <att name="title">MADIS, Meteorological Surface, METAR</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>nStaticIds</sourceName>
+        <destinationName>nStaticIds</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Statistics</att>
+            <att name="long_name">N Static Ids</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>invTime</sourceName>
+        <destinationName>invTime</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Inv Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>prevRecord</sourceName>
+        <destinationName>prevRecord</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Prev Record</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>globalInventory</sourceName>
+        <destinationName>globalInventory</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Global Inventory</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>firstOverflow</sourceName>
+        <destinationName>firstOverflow</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">First Overflow</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>isOverflow</sourceName>
+        <destinationName>isOverflow</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Is Overflow</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>secondsStage1_2</sourceName>
+        <destinationName>secondsStage1_2</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-2147483647</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Biology</att>
+            <att name="long_name">Seconds Stage1 2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>secondsStage3</sourceName>
+        <destinationName>secondsStage3</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-2147483647</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Biology</att>
+            <att name="long_name">Seconds Stage3</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>wmoId</sourceName>
+        <destinationName>wmoId</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-2147483647</att>
+            <att name="long_name">numeric WMO identification</att>
+            <att name="reference">station table</att>
+            <att name="valid_range" type="intList">1 89999</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">100000.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>stationName</sourceName>
+        <destinationName>stationName</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">alphanumeric station identification</att>
+            <att name="reference">station table</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+            <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>locationName</sourceName>
+        <destinationName>locationName</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">geographic station location</att>
+            <att name="reference">station table</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">latitude</att>
+            <att name="reference">station table</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degree_north</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">longitude</att>
+            <att name="reference">station table</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degree_east</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>elevation</sourceName>
+        <destinationName>altitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">elevation</att>
+            <att name="reference">station table</att>
+            <att name="standard_name">elevation</att>
+            <att name="units">meter</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Location</att>
+            <att name="standard_name">altitude</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>timeObs</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">1.7976931348623157E308</att>
+            <att name="long_name">time of observation</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-1-1 00:00:00.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>timeNominal</sourceName>
+        <destinationName>timeNominal</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">1.7976931348623157E308</att>
+            <att name="long_name">METAR hour</att>
+            <att name="units">seconds since 1970-1-1 00:00:00.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="standard_name">time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>timeReceived</sourceName>
+        <destinationName>timeReceived</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">1.7976931348623157E308</att>
+            <att name="long_name">time of observation</att>
+            <att name="units">seconds since 1970-1-1 00:00:00.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="standard_name">time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>reportType</sourceName>
+        <destinationName>reportType</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">report type</att>
+            <att name="reference">FMH-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>autoStationType</sourceName>
+        <destinationName>autoStationType</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">automated station type</att>
+            <att name="reference">FMH-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>skyCover</sourceName>
+        <destinationName>skyCover</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">sky cover</att>
+            <att name="reference">FMH-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>skyLayerBase</sourceName>
+        <destinationName>skyLayerBase</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">sky cover layer base</att>
+            <att name="units">meter</att>
+            <att name="valid_min" type="int">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>visibility</sourceName>
+        <destinationName>visibility</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">visibility</att>
+            <att name="standard_name">visibility_in_air</att>
+            <att name="units">meter</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>visibilityDD</sourceName>
+        <destinationName>visibilityDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">visibility QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,V,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>visibilityQCA</sourceName>
+        <destinationName>visibilityQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Reserved</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check applied</att>
+            <att name="Bit7Set">Spatial Consistency check applied</att>
+            <att name="Bit8Set">Forecast Model Consistency check applied</att>
+            <att name="long_name">visibility QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>visibilityQCR</sourceName>
+        <destinationName>visibilityQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Reserved</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check failed</att>
+            <att name="Bit7Set">Spatial Consistency check failed</att>
+            <att name="Bit8Set">Forecast Model Consistency check failed</att>
+            <att name="long_name">visibility QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>visibilityICA</sourceName>
+        <destinationName>visibilityICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">IC check 16 applied</att>
+            <att name="long_name">visibility QC applied word</att>
+            <att name="NoBitsSet">No IC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>visibilityICR</sourceName>
+        <destinationName>visibilityICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">IC check 16 failed</att>
+            <att name="long_name">visibility IC results word</att>
+            <att name="NoBitsSet">No IC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>presWeather</sourceName>
+        <destinationName>presWeather</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">present weather</att>
+            <att name="reference">FMH-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>seaLevelPress</sourceName>
+        <destinationName>seaLevelPress</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">sea level pressure</att>
+            <att name="standard_name">air_pressure_at_sea_level</att>
+            <att name="units">pascal</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">105000.0</att>
+            <att name="colorBarMinimum" type="double">95000.0</att>
+            <att name="ioos_category">Pressure</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>seaLevelPressDD</sourceName>
+        <destinationName>seaLevelPressDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">Sea level pressure QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,V,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>seaLevelPressQCA</sourceName>
+        <destinationName>seaLevelPressQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check applied</att>
+            <att name="Bit7Set">Spatial Consistency check applied</att>
+            <att name="Bit8Set">Forecast Model Consistency check applied</att>
+            <att name="long_name">sea level pressure QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>seaLevelPressQCR</sourceName>
+        <destinationName>seaLevelPressQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check failed</att>
+            <att name="Bit7Set">Spatial Consistency check failed</att>
+            <att name="Bit8Set">Forecast Model Consistency check failed</att>
+            <att name="long_name">sea level pressure QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>seaLevelPressICA</sourceName>
+        <destinationName>seaLevelPressICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">IC check 1 applied</att>
+            <att name="long_name">sea level pressure IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Pressure</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>seaLevelPressICR</sourceName>
+        <destinationName>seaLevelPressICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">IC check 1 failed</att>
+            <att name="long_name">sea level pressure IC results word</att>
+            <att name="NoBitsSet">No IC check failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Pressure</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperature</sourceName>
+        <destinationName>temperature</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">temperature</att>
+            <att name="standard_name">air_temperature</att>
+            <att name="units">kelvin</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">313.0</att>
+            <att name="colorBarMinimum" type="double">263.0</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperatureDD</sourceName>
+        <destinationName>temperatureDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">temperature QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,V,X,Q,K,k,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperatureQCA</sourceName>
+        <destinationName>temperatureQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit10Set">Kalman Filter applied</att>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check applied</att>
+            <att name="Bit7Set">Spatial Consistency check applied</att>
+            <att name="Bit8Set">Forecast Model Consistency check applied</att>
+            <att name="Bit9Set">Reserved</att>
+            <att name="long_name">temperature QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperatureQCR</sourceName>
+        <destinationName>temperatureQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit10Set">Kalman Filter failed</att>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check failed</att>
+            <att name="Bit7Set">Spatial Consistency check failed</att>
+            <att name="Bit8Set">Forecast Model Consistency check failed</att>
+            <att name="Bit9Set">Reserved</att>
+            <att name="long_name">Temperature QC Results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperatureICA</sourceName>
+        <destinationName>temperatureICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">IC check 3 applied</att>
+            <att name="long_name">temperature IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperatureICR</sourceName>
+        <destinationName>temperatureICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">IC check 3 failed</att>
+            <att name="long_name">temperature IC results word</att>
+            <att name="NoBitsSet">No IC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>tempFromTenths</sourceName>
+        <destinationName>tempFromTenths</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">temperature from tenths of a degree Celsius</att>
+            <att name="units">kelvin</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">313.0</att>
+            <att name="colorBarMinimum" type="double">263.0</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dewpoint</sourceName>
+        <destinationName>dewpoint</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">dewpoint</att>
+            <att name="standard_name">dew_point_temperature</att>
+            <att name="units">kelvin</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">313.0</att>
+            <att name="colorBarMinimum" type="double">273.0</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dewpointDD</sourceName>
+        <destinationName>dewpointDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">dew point QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,V,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dewpointQCA</sourceName>
+        <destinationName>dewpointQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check applied</att>
+            <att name="Bit7Set">Spatial Consistency check applied</att>
+            <att name="Bit8Set">Forecast Model Consistency check applied</att>
+            <att name="long_name">dew point QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dewpointQCR</sourceName>
+        <destinationName>dewpointQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check failed</att>
+            <att name="Bit7Set">Spatial Consistency check failed</att>
+            <att name="Bit8Set">Forecast Model Consistency check failed</att>
+            <att name="long_name">dew point QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dewpointICA</sourceName>
+        <destinationName>dewpointICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">IC check 3 applied</att>
+            <att name="long_name">dew point IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dewpointICR</sourceName>
+        <destinationName>dewpointICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">IC check 3 failed</att>
+            <att name="long_name">dew point IC results word</att>
+            <att name="NoBitsSet">No IC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dpFromTenths</sourceName>
+        <destinationName>dpFromTenths</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">dewpoint from tenths of a degree Celsius</att>
+            <att name="units">kelvin</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">313.0</att>
+            <att name="colorBarMinimum" type="double">273.0</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="standard_name">dew_point_temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windDir</sourceName>
+        <destinationName>windDir</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">wind direction</att>
+            <att name="standard_name">wind_from_direction</att>
+            <att name="units">degree</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">360.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windDirDD</sourceName>
+        <destinationName>windDirDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">wind direction QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,V,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windDirQCA</sourceName>
+        <destinationName>windDirQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check applied</att>
+            <att name="Bit7Set">Spatial Consistency check applied</att>
+            <att name="Bit8Set">Forecast Model Consistency check applied</att>
+            <att name="long_name">wind direction QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windDirQCR</sourceName>
+        <destinationName>windDirQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check failed</att>
+            <att name="Bit7Set">Spatial Consistency check failed</att>
+            <att name="Bit8Set">Forecast Model Consistency check failed</att>
+            <att name="long_name">wind direction QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windDirICA</sourceName>
+        <destinationName>windDirICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">IC check 6 applied</att>
+            <att name="long_name">wind direction IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">360.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Wind</att>
+            <att name="standard_name">wind_from_direction</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windDirICR</sourceName>
+        <destinationName>windDirICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">IC check 6 failed</att>
+            <att name="long_name">wind direction IC results word</att>
+            <att name="NoBitsSet">No IC check failed</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">360.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Wind</att>
+            <att name="standard_name">wind_from_direction</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windSpeed</sourceName>
+        <destinationName>windSpeed</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">wind speed</att>
+            <att name="standard_name">wind_speed</att>
+            <att name="units">meter/sec</att>
+            <att name="valid_min" type="int">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">15.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windSpeedDD</sourceName>
+        <destinationName>windSpeedDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">wind speed QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,V,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windSpeedQCA</sourceName>
+        <destinationName>windSpeedQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check applied</att>
+            <att name="Bit7Set">Spatial Consistency check applied</att>
+            <att name="Bit8Set">Forecast Model Consistency check applied</att>
+            <att name="long_name">wind speed QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windSpeedQCR</sourceName>
+        <destinationName>windSpeedQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check failed</att>
+            <att name="Bit7Set">Spatial Consistency check failed</att>
+            <att name="Bit8Set">Forecast Model Consistency check failed</att>
+            <att name="long_name">wind speed QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windSpeedICA</sourceName>
+        <destinationName>windSpeedICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">IC check 6 applied</att>
+            <att name="Bit3Set">IC check 7 applied</att>
+            <att name="Bit4Set">IC check 8 applied</att>
+            <att name="Bit5Set">IC check 9 applied</att>
+            <att name="long_name">wind speed IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">15.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Wind</att>
+            <att name="standard_name">wind_speed</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windSpeedICR</sourceName>
+        <destinationName>windSpeedICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">IC check 6 failed</att>
+            <att name="Bit3Set">IC check 7 failed</att>
+            <att name="Bit4Set">IC check 8 failed</att>
+            <att name="Bit5Set">IC check 9 failed</att>
+            <att name="long_name">wind speed IC results word</att>
+            <att name="NoBitsSet">No IC check failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">15.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Wind</att>
+            <att name="standard_name">wind_speed</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windGust</sourceName>
+        <destinationName>windGust</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">wind gust</att>
+            <att name="standard_name">wind_gust</att>
+            <att name="units">meter/sec</att>
+            <att name="valid_min" type="int">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windGustDD</sourceName>
+        <destinationName>windGustDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">Wind gust QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windGustQCA</sourceName>
+        <destinationName>windGustQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="long_name">Wind gust QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>windGustQCR</sourceName>
+        <destinationName>windGustQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="long_name">Wind gust QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>altimeter</sourceName>
+        <destinationName>altimeter</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">altimeter setting</att>
+            <att name="standard_name">altimeter_setting</att>
+            <att name="units">pascal</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>altimeterDD</sourceName>
+        <destinationName>altimeterDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">altimeter setting QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,V,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>altimeterQCA</sourceName>
+        <destinationName>altimeterQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Reserved</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check applied</att>
+            <att name="Bit7Set">Spatial Consistency check applied</att>
+            <att name="long_name">altimeter setting QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>altimeterQCR</sourceName>
+        <destinationName>altimeterQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Reserved</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check failed</att>
+            <att name="Bit7Set">Spatial Consistency check failed</att>
+            <att name="long_name">altimeter setting QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>minTemp24Hour</sourceName>
+        <destinationName>minTemp24Hour</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">24 hour min temperature</att>
+            <att name="standard_name">minimum_24h_air_temperature</att>
+            <att name="units">kelvin</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">313.0</att>
+            <att name="colorBarMinimum" type="double">263.0</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>minTemp24HourDD</sourceName>
+        <destinationName>minTemp24HourDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">min 24 hour temp QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>minTemp24HourQCA</sourceName>
+        <destinationName>minTemp24HourQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="long_name">min 24 hour temp QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>minTemp24HourQCR</sourceName>
+        <destinationName>minTemp24HourQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="long_name">min 24 hour temp QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>maxTemp24Hour</sourceName>
+        <destinationName>maxTemp24Hour</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">24 hour max temperature</att>
+            <att name="standard_name">maximum_24h_air_temperature</att>
+            <att name="units">kelvin</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">313.0</att>
+            <att name="colorBarMinimum" type="double">263.0</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>maxTemp24HourDD</sourceName>
+        <destinationName>maxTemp24HourDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">max 24 hour temp QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>maxTemp24HourQCA</sourceName>
+        <destinationName>maxTemp24HourQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="long_name">max 24 hour temp QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>maxTemp24HourQCR</sourceName>
+        <destinationName>maxTemp24HourQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="long_name">max 24 hour temp QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip1Hour</sourceName>
+        <destinationName>precip1Hour</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">1 hour precipitation</att>
+            <att name="units">meter</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip1HourDD</sourceName>
+        <destinationName>precip1HourDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">1-h precip amount QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip1HourQCA</sourceName>
+        <destinationName>precip1HourQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="long_name">1-h precip amount QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip1HourQCR</sourceName>
+        <destinationName>precip1HourQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="long_name">1-h precip amount QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip1HourICA</sourceName>
+        <destinationName>precip1HourICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check applied</att>
+            <att name="Bit2Set">IC check 20 applied</att>
+            <att name="Bit3Set">IC check 22 applied</att>
+            <att name="Bit4Set">IC check 52 applied</att>
+            <att name="Bit5Set">IC check 53 applied</att>
+            <att name="Bit6Set">IC check 54 applied</att>
+            <att name="long_name">1-h precip amount IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip1HourICR</sourceName>
+        <destinationName>precip1HourICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check failed</att>
+            <att name="Bit2Set">IC check 20 failed</att>
+            <att name="Bit3Set">IC check 22 failed</att>
+            <att name="Bit4Set">IC check 52 failed</att>
+            <att name="Bit5Set">IC check 53 failed</att>
+            <att name="Bit6Set">IC check 54 failed</att>
+            <att name="long_name">1-h precip amount IC results word</att>
+            <att name="NoBitsSet">No IC check failed</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip3Hour</sourceName>
+        <destinationName>precip3Hour</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">3 hour precipitation</att>
+            <att name="units">meter</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip3HourDD</sourceName>
+        <destinationName>precip3HourDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">3-h precip amount QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip3HourQCA</sourceName>
+        <destinationName>precip3HourQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="long_name">3-h precip amount QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip3HourQCR</sourceName>
+        <destinationName>precip3HourQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="long_name">3-h precip amount QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip3HourICA</sourceName>
+        <destinationName>precip3HourICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check applied</att>
+            <att name="Bit2Set">IC check 20 applied</att>
+            <att name="Bit3Set">IC check 22 applied</att>
+            <att name="Bit4Set">IC check 52 applied</att>
+            <att name="Bit5Set">IC check 53 applied</att>
+            <att name="Bit6Set">IC check 54 applied</att>
+            <att name="long_name">3-h precip amount IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip3HourICR</sourceName>
+        <destinationName>precip3HourICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check failed</att>
+            <att name="Bit2Set">IC check 20 failed</att>
+            <att name="Bit3Set">IC check 22 failed</att>
+            <att name="Bit4Set">IC check 52 failed</att>
+            <att name="Bit5Set">IC check 53 failed</att>
+            <att name="Bit6Set">IC check 54 failed</att>
+            <att name="long_name">3-h precip amount IC results word</att>
+            <att name="NoBitsSet">No IC check failed</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip6Hour</sourceName>
+        <destinationName>precip6Hour</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">6 hour precipitation</att>
+            <att name="units">meter</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip6HourDD</sourceName>
+        <destinationName>precip6HourDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">6-h precip amount QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip6HourQCA</sourceName>
+        <destinationName>precip6HourQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="long_name">6-h precip amount QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip6HourQCR</sourceName>
+        <destinationName>precip6HourQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="long_name">6-h precip amount QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip6HourICA</sourceName>
+        <destinationName>precip6HourICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check applied</att>
+            <att name="Bit2Set">IC check 20 applied</att>
+            <att name="Bit3Set">IC check 22 applied</att>
+            <att name="Bit4Set">IC check 52 applied</att>
+            <att name="Bit5Set">IC check 53 applied</att>
+            <att name="Bit6Set">IC check 54 applied</att>
+            <att name="long_name">6-h precip amount IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip6HourICR</sourceName>
+        <destinationName>precip6HourICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check failed</att>
+            <att name="Bit2Set">IC check 20 failed</att>
+            <att name="Bit3Set">IC check 22 failed</att>
+            <att name="Bit4Set">IC check 52 failed</att>
+            <att name="Bit5Set">IC check 53 failed</att>
+            <att name="Bit6Set">IC check 54 failed</att>
+            <att name="long_name">6-h precip amount IC results word</att>
+            <att name="NoBitsSet">No IC check failed</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip24Hour</sourceName>
+        <destinationName>precip24Hour</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">24 hour precipitation</att>
+            <att name="units">meter</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip24HourDD</sourceName>
+        <destinationName>precip24HourDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">24-h precip amount QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip24HourQCA</sourceName>
+        <destinationName>precip24HourQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="long_name">24-h precip amount QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip24HourQCR</sourceName>
+        <destinationName>precip24HourQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="long_name">24-h precip amount QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip24HourICA</sourceName>
+        <destinationName>precip24HourICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check applied</att>
+            <att name="Bit2Set">IC check 20 applied</att>
+            <att name="Bit3Set">IC check 22 applied</att>
+            <att name="Bit4Set">IC check 52 applied</att>
+            <att name="Bit5Set">IC check 53 applied</att>
+            <att name="Bit6Set">IC check 54 applied</att>
+            <att name="long_name">24-h precip amount IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>precip24HourICR</sourceName>
+        <destinationName>precip24HourICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master-at least 1 check failed</att>
+            <att name="Bit2Set">IC check 20 failed</att>
+            <att name="Bit3Set">IC check 22 failed</att>
+            <att name="Bit4Set">IC check 52 failed</att>
+            <att name="Bit5Set">IC check 53 failed</att>
+            <att name="Bit6Set">IC check 54 failed</att>
+            <att name="long_name">24-h precip amount IC results word</att>
+            <att name="NoBitsSet">No IC check failed</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Meteorology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressChangeChar</sourceName>
+        <destinationName>pressChangeChar</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="short">-32767</att>
+            <att name="long_name">character of pressure change</att>
+            <att name="reference">FMH-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Pressure</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressChange3Hour</sourceName>
+        <destinationName>pressChange3Hour</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">3 hour pressure change</att>
+            <att name="standard_name">tendency_of_air_pressure</att>
+            <att name="units">pascal</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">3.0</att>
+            <att name="colorBarMinimum" type="double">-3.0</att>
+            <att name="ioos_category">Pressure</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressChange3HourDD</sourceName>
+        <destinationName>pressChange3HourDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">3h pressure change QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressChange3HourQCA</sourceName>
+        <destinationName>pressChange3HourQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Reserved</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check applied</att>
+            <att name="Bit7Set">Spatial Consistency check applied</att>
+            <att name="long_name">3h pressure change QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressChange3HourQCR</sourceName>
+        <destinationName>pressChange3HourQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Reserved</att>
+            <att name="Bit6Set">Statistical Spatial Consistency check failed</att>
+            <att name="Bit7Set">Spatial Consistency check failed</att>
+            <att name="long_name">3h pressure change QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressChange3HourICA</sourceName>
+        <destinationName>pressChange3HourICA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">IC check 2 applied</att>
+            <att name="long_name">3h pressure change IC applied word</att>
+            <att name="NoBitsSet">No IC check applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Pressure</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressChange3HourICR</sourceName>
+        <destinationName>pressChange3HourICR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">IC check 2 failed</att>
+            <att name="long_name">3h pressure change IC results word</att>
+            <att name="NoBitsSet">No IC check failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Pressure</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>snowCover</sourceName>
+        <destinationName>snowCover</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">3.4028235E38</att>
+            <att name="long_name">snow cover</att>
+            <att name="standard_name">surface_snow_amount</att>
+            <att name="units">meter</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Ice Distribution</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>snowCoverDD</sourceName>
+        <destinationName>snowCoverDD</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">snow cover QC summary value</att>
+            <att name="reference">Global Attributes Section</att>
+            <att name="values">Z,C,S,X,Q,G, or B</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>snowCoverQCA</sourceName>
+        <destinationName>snowCoverQCA</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check applied</att>
+            <att name="Bit2Set">Validity check applied</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check applied</att>
+            <att name="Bit5Set">Temporal Consistency check applied</att>
+            <att name="long_name">snow cover QC applied word</att>
+            <att name="NoBitsSet">No QC applied</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>snowCoverQCR</sourceName>
+        <destinationName>snowCoverQCR</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="Bit1Set">Master bit - at least 1 check failed</att>
+            <att name="Bit2Set">Validity check failed</att>
+            <att name="Bit3Set">Reserved</att>
+            <att name="Bit4Set">Internal Consistency check failed</att>
+            <att name="Bit5Set">Temporal Consistency check failed</att>
+            <att name="long_name">snow cover QC results word</att>
+            <att name="NoBitsSet">No QC failures</att>
+            <att name="reference">Global Attributes Section</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>correction</sourceName>
+        <destinationName>correction</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-2147483647</att>
+            <att name="long_name">corrected METAR indicator</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>rawMETAR</sourceName>
+        <destinationName>rawMETAR</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">raw METAR message</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+
+

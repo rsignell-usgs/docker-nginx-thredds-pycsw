@@ -1,0 +1,155 @@
+<dataset type="EDDTableFromNcCFFiles" datasetID="blodgett_8507_aff9_7b1a" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/sand/usgs/users/rsignell/data/blodgett/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    <!-- sourceAttributes>
+        <att name="Conventions">CF-1.7</att>
+        <att name="featureType">point</att>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="cdm_data_type">point</att>
+        <att name="Conventions">CF-1.7, COARDS, ACDD-1.3</att>
+        <att name="creator_name">USGS</att>
+        <att name="creator_url">http://www.usgs.gov/</att>
+        <att name="infoUrl">http://www.usgs.gov/</att>
+        <att name="institution">USGS</att>
+        <att name="keywords">above, acc, ACC_RECHG, ACC_RECHG_percent_nodata, data, distance, feature, feature_name, geological, height, identifier, latitude, local, longitude, name, nodata, obs, observation, observations, percent, rechg, source, stamp, states, surface, survey, time, united, usgs, vertical</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="subsetVariables">latitude, longitude, alt, time</att>
+        <att name="summary">Data from a local source.</att>
+        <att name="title">Data from a local source.</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>obs</sourceName>
+        <destinationName>obs</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Obs</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ACC_RECHG</sourceName>
+        <destinationName>ACC_RECHG</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">lat lon alt time</att>
+            <att name="units">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">ACC RECHG</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ACC_RECHG_percent_nodata</sourceName>
+        <destinationName>ACC_RECHG_percent_nodata</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-9999</att>
+            <att name="coordinates">lat lon alt time</att>
+            <att name="units">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">ACC RECHG Percent Nodata</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>feature_name</sourceName>
+        <destinationName>feature_name</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">timeseries_id</att>
+            <att name="coordinates">lat lon alt time</att>
+            <att name="long_name">Feature Name</att>
+            <att name="units">0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lat</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.0</att>
+            <att name="long_name">latitude of the observation</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lon</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.0</att>
+            <att name="long_name">longitude of the observation</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>alt</sourceName>
+        <destinationName>alt</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.0</att>
+            <att name="long_name">vertical distance above the surface</att>
+            <att name="standard_name">height</att>
+            <att name="units">m</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-999</att>
+            <att name="long_name">time stamp</att>
+            <att name="standard_name">time</att>
+            <att name="units">days since 1970-01-01 00:00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+
+

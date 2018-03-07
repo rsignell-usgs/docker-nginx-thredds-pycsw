@@ -1,0 +1,2237 @@
+<dataset type="EDDTableFromNcCFFiles" datasetID="ooi_bf67_c9e1_43f2" active="true">
+    <reloadEveryNMinutes>10</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/usgs/data2/rsignell/data/ooi</fileDir>
+    <fileNameRegex>.*superv\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    <addAttributes>
+        <att name="Conventions">CF-1.6,ACDD-1.3, COARDS</att>
+        <att name="cdm_data_type">timeSeries</att>
+        <att name="cdm_timeseries_variables">feature_type_instance, latitude, longitude, platform</att>
+        <att name="subsetVariables">feature_type_instance, latitude, longitude, platform</att>
+        <att name="infoUrl">http://ceoas.oregonstate.edu/ooi</att>
+        <att name="keywords">feature_type_instance,latitude,longitude,crs,platform,time,z,error_flags,pps_source,heartbeat_delta,sbd_power_state,temperature2,sbd_message_pending,backup_battery_current,iridium_error_flag,leak_detect_enable,ground_fault_9522_fw,ground_fault_sbd,iridium_voltage,main_current,main_voltage,dsl_power_state,iridium_current,humidity,gps_power_state,leak_detect_voltage2,iridium_power_state,ground_fault_main,heartbeat_enable,dcl_power_state,fwwf_current,fwwf_voltage,wake_code,ground_fault_gps,wake_power_count,temperature1,fwwf_power_state,fwwf_power_flag,ground_fault_enable,pressure,esw_power_state,leak_detect_voltage1,heartbeat_threshold,backup_battery_voltage,wake_time_count</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+    </addAttributes>
+    
+    <dataVariable>
+        <sourceName>pps_source</sourceName>
+        <destinationName>pps_source</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>error_flags</sourceName>
+        <destinationName>error_flags</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>temperature2</sourceName>
+        <destinationName>temperature2</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">19.2</att>
+            <att name="colorBarMinimum" type="double">12.2</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>leak_detect_voltage2</sourceName>
+        <destinationName>leak_detect_voltage2</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">2166</att>
+            <att name="colorBarMinimum" type="double">1218</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>sbd_message_pending</sourceName>
+        <destinationName>sbd_message_pending</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>dsl_power_state</sourceName>
+        <destinationName>dsl_power_state</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>iridium_voltage</sourceName>
+        <destinationName>iridium_voltage</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">12.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>leak_detect_enable</sourceName>
+        <destinationName>leak_detect_enable</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>heartbeat_threshold</sourceName>
+        <destinationName>heartbeat_threshold</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>z</sourceName>
+        <destinationName>altitude</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">-8000.0</att>
+            
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>iridium_power_state</sourceName>
+        <destinationName>iridium_power_state</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>main_current</sourceName>
+        <destinationName>main_current</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">1842.0</att>
+            <att name="colorBarMinimum" type="double">354.0</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>ground_fault_gps</sourceName>
+        <destinationName>ground_fault_gps</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">-14.1</att>
+            <att name="colorBarMinimum" type="double">-89.9</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>dcl_power_state</sourceName>
+        <destinationName>dcl_power_state</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">104</att>
+            <att name="colorBarMinimum" type="double">8</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>temperature1</sourceName>
+        <destinationName>temperature1</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">21.4</att>
+            <att name="colorBarMinimum" type="double">14.3</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>sbd_power_state</sourceName>
+        <destinationName>sbd_power_state</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>wake_power_count</sourceName>
+        <destinationName>wake_power_count</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">2921</att>
+            <att name="colorBarMinimum" type="double">2898</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>ground_fault_sbd</sourceName>
+        <destinationName>ground_fault_sbd</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">-14.1</att>
+            <att name="colorBarMinimum" type="double">-17.3</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>main_voltage</sourceName>
+        <destinationName>main_voltage</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">25.6</att>
+            <att name="colorBarMinimum" type="double">17.8</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>humidity</sourceName>
+        <destinationName>humidity</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">13.1</att>
+            <att name="colorBarMinimum" type="double">10.6</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>heartbeat_delta</sourceName>
+        <destinationName>heartbeat_delta</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>pressure</sourceName>
+        <destinationName>pressure</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">7.1</att>
+            <att name="colorBarMinimum" type="double">7.0</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>fwwf_current</sourceName>
+        <destinationName>fwwf_current</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">584.1</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>ground_fault_enable</sourceName>
+        <destinationName>ground_fault_enable</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>fwwf_voltage</sourceName>
+        <destinationName>fwwf_voltage</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">12.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>gps_power_state</sourceName>
+        <destinationName>gps_power_state</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>wake_time_count</sourceName>
+        <destinationName>wake_time_count</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>feature_type_instance</sourceName>
+        <destinationName>feature_type_instance</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>iridium_error_flag</sourceName>
+        <destinationName>iridium_error_flag</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>platform</sourceName>
+        <destinationName>platform</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>backup_battery_current</sourceName>
+        <destinationName>backup_battery_current</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>wake_code</sourceName>
+        <destinationName>wake_code</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>ground_fault_main</sourceName>
+        <destinationName>ground_fault_main</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">185.9</att>
+            <att name="colorBarMinimum" type="double">-312.1</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>heartbeat_enable</sourceName>
+        <destinationName>heartbeat_enable</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>fwwf_power_state</sourceName>
+        <destinationName>fwwf_power_state</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">3</att>
+            <att name="colorBarMinimum" type="double">0</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>esw_power_state</sourceName>
+        <destinationName>esw_power_state</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>ground_fault_9522_fw</sourceName>
+        <destinationName>ground_fault_9522_fw</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">409.3</att>
+            <att name="colorBarMinimum" type="double">-575.0</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>fwwf_power_flag</sourceName>
+        <destinationName>fwwf_power_flag</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>crs</sourceName>
+        <destinationName>crs</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>iridium_current</sourceName>
+        <destinationName>iridium_current</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">171.1</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>backup_battery_voltage</sourceName>
+        <destinationName>backup_battery_voltage</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+    <dataVariable>
+        <sourceName>leak_detect_voltage1</sourceName>
+        <destinationName>leak_detect_voltage1</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+             
+            <att name="colorBarMaximum" type="double">2361</att>
+            <att name="colorBarMinimum" type="double">2314</att>
+            
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    
+</dataset>
+
+
+<dataset type="EDDTableFromNcCFFiles" datasetID="ECOHAB_I_f7e9_ce5f_9d38" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/usgs/data2/emontgomery/stellwagen/CF-1.6/ECOHAB_I/</fileDir>
+    <fileNameRegex>4151sc-a.cdf</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles> 
+<!--    <SouceaddAttributes>
+        <att name="cdm_data_type">TimeSeries</att>
+        <att name="cdm_timeseries_variables">latitude,longitude,altitude,feature_type_instance</att>
+        <att name="COMPOSITE" type="int">0</att>
+        <att name="contributor_name">R. Signell</att>
+        <att name="contributor_role">principalInvestigator</att>
+        <att name="Conventions">CF-1.6</att>
+        <att name="COORD_SYSTEM">GEOGRAPHICAL</att>
+        <att name="CREATION_DATE">10:19 25-APR-97</att>
+        <att name="creator_email">rsignell@usgs.gov</att>
+        <att name="creator_name">Rich Signell</att>
+        <att name="creator_phone">+1 (508) 548-8700</att>
+        <att name="creator_url">http://www.usgs.gov</att>
+        <att name="cycles" type="int">36993</att>
+        <att name="DATA_ORIGIN">USGS/WHFC</att>
+        <att name="DATA_TYPE">TIME</att>
+        <att name="date_created">2016-02-03T19:39:00Z</att>
+        <att name="date_issued">2016-02-03T19:39:00Z</att>
+        <att name="DELTA_T">3.7500 minutes</att>
+        <att name="DEPTH_CONST" type="int">0</att>
+        <att name="DESCRIPT">SEACAT GULF OF MAINE MONHEGAN: CLEAN DATA, NOT SCRUBBED     </att>
+        <att name="description">ECOHAB_I - 4151sc-a.cdf</att>
+        <att name="DRIFTER" type="int">0</att>
+        <att name="featureType">timeSeries</att>
+        <att name="FILL_FLAG" type="int">0</att>
+        <att name="geospatial_lat_max" type="float">43.5635</att>
+        <att name="geospatial_lat_min" type="float">43.5635</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_lon_max" type="float">-69.3695</att>
+        <att name="geospatial_lon_min" type="float">-69.3695</att>
+        <att name="geospatial_lon_units">degrees_east</att>
+        <att name="geospatial_vertical_max" type="float">-5.0</att>
+        <att name="geospatial_vertical_min" type="float">-5.0</att>
+        <att name="geospatial_vertical_positive">up</att>
+        <att name="geospatial_vertical_resolution">0</att>
+        <att name="geospatial_vertical_units">meters</att>
+        <att name="history">Converted to EPIC Wed Nov 13 15:10:17 1996
+Changed epic code 20 to 20 on Thu Apr 24 18:25:02 1997
+</att>
+        <att name="id">4151sc-a</att>
+        <att name="INST_TYPE">SC-255:TR-417</att>
+        <att name="institution">USGS Coastal and Marine Geology Program</att>
+        <att name="keywords">Oceans &gt; Ocean Pressure &gt; Water Pressure, Oceans &gt; Ocean Temperature &gt; Water Temperature, Oceans &gt; Salinity/Density &gt; Conductivity, Oceans &gt; Salinity/Density &gt; Salinity</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="latitude" type="float">43.5635</att>
+        <att name="longitude" type="float">-69.3695</att>
+        <att name="magnetic_variation(deg)" type="float">0.0</att>
+        <att name="MOORING" type="long">415</att>
+        <att name="naming_authority">gov.usgs.cmgp</att>
+        <att name="original_filename">4151sc-a.cdf</att>
+        <att name="original_folder">ECOHAB_I</att>
+        <att name="platform">platform</att>
+        <att name="POS_CONST" type="int">0</att>
+        <att name="project">U.S. Geological Survey Oceanographic Time-Series Data</att>
+        <att name="project_summary">A field program to study the transport and fate of toxic dinoflagellate blooms in the western Gulf of Maine.</att>
+        <att name="project_title">Ecology of Harmful Algal Blooms (ECOHAB-I)</att>
+        <att name="publisher_email">emontgomery@usgs.gov</att>
+        <att name="publisher_name">Ellyn Montgomery</att>
+        <att name="publisher_phone">+1 (508) 548-8700</att>
+        <att name="publisher_url">http://www.usgs.gov</att>
+        <att name="source">USGS</att>
+        <att name="standard_name_vocabulary">CF-1.6</att>
+        <att name="start_time">20-Mar-1993 00:31:53</att>
+        <att name="stop_time">24-Jun-1993 08:31:53</att>
+        <att name="time_coverage_duration">P8323200S</att>
+        <att name="time_coverage_end">1993-06-24T08:31:53</att>
+        <att name="time_coverage_start">1993-03-20T00:31:53</att>
+        <att name="title">4151sc-a.cdf</att>
+        <att name="VAR_DESC">temp :: con :: sal :: trans </att>
+        <att name="WATER_DEPTH" type="int">87</att>
+        <att name="water_depth(m)" type="float">87.0</att>
+        <att name="WATER_MASS">?</att>
+    </sourceAttributes>   -->
+    <addAttributes>
+        <att name="cdm_data_type">TimeSeries</att>
+        <att name="cdm_timeseries_variables">latitude,longitude,altitude,feature_type_instance</att>
+        <att name="Conventions">CF-1.6, COARDS, ACDD-1.3</att>
+        <att name="CREATION_DATE">null</att>
+        <att name="creation_date">10:19 25-APR-97</att>
+        <att name="infoUrl">http://www.usgs.gov</att>
+        <att name="keywords">//www.opengis.net/def/crs/epsg/0/4326, 4151sc, 4151sc-a, altitude, atmosphere,
+Atmosphere &gt; Altitude &gt; Station Height,
+C_50, coastal, conductivity, crs, data, density, each, ecohab, electrical, feature, feature_type_instance, geological, geology, height, identifier, instance, latitude, longitude, marine, measurement, ocean, oceans,
+Oceans &gt; Ocean Pressure &gt; Water Pressure,
+Oceans &gt; Ocean Temperature &gt; Water Temperature,
+Oceans &gt; Salinity/Density &gt; Conductivity,
+Oceans &gt; Salinity/Density &gt; Salinity,
+optical, optical properties, platform, practical, pressure, program, properties, relative, S_40, salinity, sea, sea_water_electrical_conductivity, sea_water_practical_salinity, sea_water_temperature, seawater, sensor, states, station, surface, survey, T_20, temperature, time, tran_4010, transmission, type, united, usgs, volts, water</att>
+        <att name="license">[standard]</att>
+        <att name="magnetic_variation(deg)">null</att>
+        <att name="magnetic_variation_deg" type="float">0.0</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="start_time">null</att>
+        <att name="stop_time">null</att>
+        <att name="subsetVariables">feature_type_instance, latitude, longitude, altitude, crs, platform</att>
+        <att name="summary">ECOHAB_I - 4151sc-a.cdf. United States Geological Survey (USGS) Coastal and Marine Geology Program data from a local source.</att>
+        <att name="title">4151sc-a</att>
+        <att name="water_depth(m)">null</att>
+        <att name="water_depth_m" type="float">87.0</att>
+        <att name="WATER_MASS">null</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>feature_type_instance</sourceName>
+        <destinationName>feature_type_instance</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">timeseries_id</att>
+            <att name="long_name">Identifier for each feature type instance</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">sensor latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">sensor longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="calendar">gregorian</att>
+            <att name="long_name">time of measurement</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>z</sourceName>
+        <destinationName>altitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="axis">Z</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">z of the sensor relative to the water surface</att>
+            <att name="positive">up</att>
+            <att name="standard_name">height</att>
+            <att name="units">m</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">-8000.0</att>
+            <att name="colorBarPalette">Topography</att>
+            <att name="ioos_category">Location</att>
+            <att name="standard_name">altitude</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>crs</sourceName>
+        <destinationName>crs</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="epsg_code">EPSG:4326</att>
+            <att name="grid_mapping_name">latitude_longitude</att>
+            <att name="inverse_flattening" type="double">298.257223563</att>
+            <att name="long_name">http://www.opengis.net/def/crs/EPSG/0/4326</att>
+            <att name="semi_major_axis" type="double">6378137.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>platform</sourceName>
+        <destinationName>platform</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="definition">http://mmisw.org/ont/ioos/definition/stationID</att>
+            <att name="ioos_code">4151sc-a</att>
+            <att name="long_name">ECOHAB_I - 4151sc-a.cdf</att>
+            <att name="nodc_name">FIXED PLATFORM, MOORINGS</att>
+            <att name="short_name">4151sc-a.cdf</att>
+            <att name="type">fixed</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>C_50</sourceName>
+        <destinationName>C_50</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="float">-9999.9</att>
+            <att name="actual_max" type="float">36.9143</att>
+            <att name="actual_min" type="float">27.6495</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="epic_code" type="int">50</att>
+            <att name="generic_name">con</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Conductivity</att>
+            <att name="sensor_depth" type="double">-5.0</att>
+            <att name="serial_number">SC-255</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">S/m</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">30.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Salinity</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>S_40</sourceName>
+        <destinationName>S_40</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="float">-9999.9</att>
+            <att name="actual_max" type="float">32.4944</att>
+            <att name="actual_min" type="float">28.6698</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="epic_code" type="int">40</att>
+            <att name="FORTRAN_format">f10.2</att>
+            <att name="generic_name">sal</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Salinity</att>
+            <att name="sensor_depth" type="double">-5.0</att>
+            <att name="serial_number">SC-255</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">1e-3</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">37.0</att>
+            <att name="colorBarMinimum" type="double">32.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Salinity</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>T_20</sourceName>
+        <destinationName>T_20</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="float">-9999.9</att>
+            <att name="actual_max" type="float">13.7543</att>
+            <att name="actual_min" type="float">2.146</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="epic_code" type="int">20</att>
+            <att name="FORTRAN_format">f10.2</att>
+            <att name="generic_name">temp</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Water Temperature</att>
+            <att name="sensor_depth" type="double">-5.0</att>
+            <att name="serial_number">SC-255</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">32.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>tran_4010</sourceName>
+        <destinationName>tran_4010</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="float">-9999.9</att>
+            <att name="actual_max" type="float">4.372</att>
+            <att name="actual_min" type="float">2.462</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="epic_code" type="int">4010</att>
+            <att name="FORTRAN_format">f10.3</att>
+            <att name="generic_name">trans</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">TRANSMISSION (VOLTS)     </att>
+            <att name="sensor_depth" type="double">-5.0</att>
+            <att name="serial_number">TR-417</att>
+            <att name="units">volts</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Optical Properties</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+
+
+
+<dataset type="EDDTableFromNcCFFiles" datasetID="test_e25e_fc53_f56e" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/usgs/data2/rsignell/test/</fileDir>
+    <fileNameRegex>joe_example.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    <!-- sourceAttributes>
+        <att name="cdm_data_type">Station</att>
+        <att name="Conventions">CF-1.6,ACDD-1.3</att>
+        <att name="date_created">2017-01-28T15:19:00Z</att>
+        <att name="date_issued">2017-01-28T15:19:00Z</att>
+        <att name="date_metadata_modified">2017-01-28T15:19:00Z</att>
+        <att name="date_modified">2017-01-28T15:19:00Z</att>
+        <att name="featureType">timeSeries</att>
+        <att name="geospatial_bounds">POINT(-70.5667 41.325)</att>
+        <att name="geospatial_bounds_crs">4326</att>
+        <att name="geospatial_lat_max" type="double">41.325</att>
+        <att name="geospatial_lat_min" type="double">41.325</att>
+        <att name="geospatial_lat_resolution" type="int">0</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_lon_max" type="double">-70.5667</att>
+        <att name="geospatial_lon_min" type="double">-70.5667</att>
+        <att name="geospatial_lon_resolution" type="int">0</att>
+        <att name="geospatial_lon_units">degrees_east</att>
+        <att name="geospatial_vertical_max" type="int">4</att>
+        <att name="geospatial_vertical_min" type="int">4</att>
+        <att name="geospatial_vertical_positive">down</att>
+        <att name="geospatial_vertical_resolution">0</att>
+        <att name="geospatial_vertical_units">meters</att>
+        <att name="history">2017-01-28T15:19:00Z - pyaxiom - File created using pyaxiom</att>
+        <att name="institution">WHOI</att>
+        <att name="ncei_template_version">NCEI_NetCDF_TimeSeries_Orthogonal_Template_v2.0</att>
+        <att name="summary">Time series of concentrations per taxon per timestamp</att>
+        <att name="time_coverage_duration">PT2671676S</att>
+        <att name="time_coverage_end">2016-04-04T13:07:18</att>
+        <att name="time_coverage_resolution">PT269S</att>
+        <att name="time_coverage_start">2016-03-04T14:59:22</att>
+        <att name="title">Taxa Data from MVCO</att>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="cdm_data_type">timeSeries</att>
+        <att name="cdm_timeseries_variables">feature_type_instance, latitude, longitude, crs, platform</att>
+        <att name="Conventions">CF-1.6,ACDD-1.3, COARDS</att>
+        <att name="creator_name">WHOI</att>
+        <att name="creator_url">http://www.whoi.edu/</att>
+        <att name="infoUrl">http://www.whoi.edu/</att>
+        <att name="keywords">//www.opengis.net/def/crs/epsg/0/4326, asterionellopsis, bad, cerataul, cerataulina, ceratium, chaetoceros, ciliate, ciliate_mix, clusterflagellate, concentrations, corethron, coscinodiscus, crs, cylindrotheca, dact, DactFragCerataul, dactyliosolen, data, depth, detritus, dictyocha, dino30, dinobryon, dinophysis, dirty, dissolved, dissolved nutrients, ditylum, each, elongated, ephemera, eucampia, euglena, feature, feature_type_instance, flaccida, frag, gonyaulax, guinardia, Guinardia_flaccida, Guinardia_striata, gyrodinium, hemiaulus, hole, identifier, instance, institution, kiteflagellates, laboea, latitude, lauderia, leptocylindrus, licmophora, longitude, measurement, mix, mix_elongated, mvco, myrionecta, nutrients, oceanographic, odontella, paralia, pennate, per, phaeocystis, platform, pleurosigma, prorocentrum, pseudonitzschia, pyramimonas, quality, relative, rhizosolenia, sensor, series, skeletonema, stephanopyxis, striata, surface, taxa, taxon, taxonomy, thalassionema, thalassiosira, Thalassiosira_dirty, time, timestamp, tintinnid, type, unclassified, water, whoi, woods</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="subsetVariables">feature_type_instance, latitude, longitude, crs, platform</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>feature_type_instance</sourceName>
+        <destinationName>feature_type_instance</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">timeseries_id</att>
+            <att name="long_name">Identifier for each feature type instance</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="axis">Y</att>
+            <att name="long_name">sensor latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+            <att name="valid_max" type="double">41.325</att>
+            <att name="valid_min" type="double">41.325</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="axis">X</att>
+            <att name="long_name">sensor longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+            <att name="valid_max" type="double">-70.5667</att>
+            <att name="valid_min" type="double">-70.5667</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>crs</sourceName>
+        <destinationName>crs</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="epsg_code">EPSG:4326</att>
+            <att name="grid_mapping_name">latitude_longitude</att>
+            <att name="inverse_flattening" type="double">298.257223563</att>
+            <att name="long_name">http://www.opengis.net/def/crs/EPSG/0/4326</att>
+            <att name="semi_major_axis" type="double">6378137.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>platform</sourceName>
+        <destinationName>platform</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="definition">http://mmisw.org/ont/ioos/definition/stationID</att>
+            <att name="ioos_code">MVCO_taxa</att>
+            <att name="long_name">Time series of concentrations per taxon per timestamp</att>
+            <att name="short_name">Taxa Data from MVCO</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Taxonomy</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="axis">T</att>
+            <att name="calendar">gregorian</att>
+            <att name="long_name">time of measurement</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>z</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-9999</att>
+            <att name="axis">Z</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">z of the sensor relative to the water surface</att>
+            <att name="positive">down</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+            <att name="valid_max" type="int">4</att>
+            <att name="valid_min" type="int">4</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">-8000.0</att>
+            <att name="colorBarPalette">TopographyDepth</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Asterionellopsis</sourceName>
+        <destinationName>Asterionellopsis</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Asterionellopsis</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cerataulina</sourceName>
+        <destinationName>Cerataulina</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Cerataulina</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ceratium</sourceName>
+        <destinationName>Ceratium</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ceratium</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Chaetoceros</sourceName>
+        <destinationName>Chaetoceros</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Chaetoceros</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Corethron</sourceName>
+        <destinationName>Corethron</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Corethron</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Coscinodiscus</sourceName>
+        <destinationName>Coscinodiscus</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Coscinodiscus</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cylindrotheca</sourceName>
+        <destinationName>Cylindrotheca</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Cylindrotheca</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DactFragCerataul</sourceName>
+        <destinationName>DactFragCerataul</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Dact Frag Cerataul</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Dactyliosolen</sourceName>
+        <destinationName>Dactyliosolen</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Dactyliosolen</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Dictyocha</sourceName>
+        <destinationName>Dictyocha</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Dictyocha</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Dinobryon</sourceName>
+        <destinationName>Dinobryon</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Dinobryon</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Dinophysis</sourceName>
+        <destinationName>Dinophysis</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Dinophysis</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ditylum</sourceName>
+        <destinationName>Ditylum</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ditylum</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ephemera</sourceName>
+        <destinationName>Ephemera</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ephemera</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Eucampia</sourceName>
+        <destinationName>Eucampia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Eucampia</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Euglena</sourceName>
+        <destinationName>Euglena</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Euglena</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Gonyaulax</sourceName>
+        <destinationName>Gonyaulax</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Gonyaulax</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Guinardia</sourceName>
+        <destinationName>Guinardia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Guinardia</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Guinardia_flaccida</sourceName>
+        <destinationName>Guinardia_flaccida</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Guinardia Flaccida</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Guinardia_striata</sourceName>
+        <destinationName>Guinardia_striata</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Guinardia Striata</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Gyrodinium</sourceName>
+        <destinationName>Gyrodinium</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Gyrodinium</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Hemiaulus</sourceName>
+        <destinationName>Hemiaulus</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Hemiaulus</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Laboea</sourceName>
+        <destinationName>Laboea</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Laboea</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Lauderia</sourceName>
+        <destinationName>Lauderia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Lauderia</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Leptocylindrus</sourceName>
+        <destinationName>Leptocylindrus</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Leptocylindrus</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Licmophora</sourceName>
+        <destinationName>Licmophora</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Licmophora</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Myrionecta</sourceName>
+        <destinationName>Myrionecta</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Myrionecta</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Odontella</sourceName>
+        <destinationName>Odontella</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Odontella</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Paralia</sourceName>
+        <destinationName>Paralia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Paralia</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Phaeocystis</sourceName>
+        <destinationName>Phaeocystis</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Phaeocystis</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Pleurosigma</sourceName>
+        <destinationName>Pleurosigma</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Pleurosigma</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Prorocentrum</sourceName>
+        <destinationName>Prorocentrum</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Prorocentrum</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Pseudonitzschia</sourceName>
+        <destinationName>Pseudonitzschia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Pseudonitzschia</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Pyramimonas</sourceName>
+        <destinationName>Pyramimonas</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Pyramimonas</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Rhizosolenia</sourceName>
+        <destinationName>Rhizosolenia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Rhizosolenia</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Skeletonema</sourceName>
+        <destinationName>Skeletonema</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Skeletonema</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Stephanopyxis</sourceName>
+        <destinationName>Stephanopyxis</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Stephanopyxis</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Thalassionema</sourceName>
+        <destinationName>Thalassionema</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Thalassionema</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Thalassiosira</sourceName>
+        <destinationName>Thalassiosira</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Thalassiosira</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Thalassiosira_dirty</sourceName>
+        <destinationName>Thalassiosira_dirty</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Thalassiosira Dirty</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bad</sourceName>
+        <destinationName>bad</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Bad</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ciliate_mix</sourceName>
+        <destinationName>ciliate_mix</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ciliate Mix</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>clusterflagellate</sourceName>
+        <destinationName>clusterflagellate</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Clusterflagellate</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>detritus</sourceName>
+        <destinationName>detritus</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Detritus</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dino30</sourceName>
+        <destinationName>dino30</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Dissolved Nutrients</att>
+            <att name="long_name">Dino30</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>kiteflagellates</sourceName>
+        <destinationName>kiteflagellates</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Kiteflagellates</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mix</sourceName>
+        <destinationName>mix</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Mix</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mix_elongated</sourceName>
+        <destinationName>mix_elongated</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Mix Elongated</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pennate</sourceName>
+        <destinationName>pennate</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Pennate</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>tintinnid</sourceName>
+        <destinationName>tintinnid</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Tintinnid</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>unclassified</sourceName>
+        <destinationName>unclassified</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="missing_value" type="double">-9999.9</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Unclassified</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+
+<dataset active="true" datasetID="PIONEER_ADCP_TELEMETERED_CP02PMCI_D00001" type="EDDGridFromNcFiles">
+    <reloadEveryNMinutes>60</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/sand/usgs/users/rsignell/data/ooi/pioneer/adcp/tel/</fileDir>
+    <fileNameRegex>PIONEER_ADCP_TELEMETERED_CP02PMCI_D00001.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <matchAxisNDigits>20</matchAxisNDigits>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    
+    <addAttributes>
+        <att name="cdm_data_type">Grid</att>
+        <att name="Conventions">CF-1.6, COARDS, ACDD-1.3</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">Rutgers University</att>
+        <att name="keywords">beam, circulation, currents, data, depth, eastward, eastward_sea_water_velocity, echo, ei1, ei2, ei3, ei4, error, intensity, local, northward, northward_sea_water_velocity, ocean, oceans,
+Oceans &gt; Ocean Circulation &gt; Ocean Currents,
+sea, seawater, source, statistics, time, u, upward, upward_sea_water_velocity, v, velocity, vertical, w, water</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="summary">Data from OOI  Pioneer Array ADCP</att>
+        <att name="title">Data from OOI  Pioneer Array ADCP</att>
+    </addAttributes>
+    <axisVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </axisVariable>
+  
+    <axisVariable>
+        <sourceName>range</sourceName>
+        <destinationName>depth</destinationName>
+        
+        <addAttributes>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Depth</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+        </addAttributes>
+    </axisVariable>
+    <dataVariable>
+        <sourceName>u</sourceName>
+        <destinationName>u</destinationName>
+        <dataType>double</dataType>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="colorBarMaximum" type="double">0.5</att>
+            <att name="colorBarMinimum" type="double">-0.5</att>
+            <att name="ioos_category">Currents</att>	
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>v</sourceName>
+        <destinationName>v</destinationName>
+        <dataType>double</dataType>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="colorBarMaximum" type="double">0.5</att>
+            <att name="colorBarMinimum" type="double">-0.5</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>w</sourceName>
+        <destinationName>w</destinationName>
+        <dataType>double</dataType>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="colorBarMaximum" type="double">0.5</att>
+            <att name="colorBarMinimum" type="double">-0.5</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>err</sourceName>
+        <destinationName>err</destinationName>
+        <dataType>double</dataType>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="colorBarMaximum" type="double">50.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+
+</dataset>
+

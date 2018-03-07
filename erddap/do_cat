@@ -1,0 +1,5 @@
+cat header.xml \
+./xml_parts/ww3/*.xml \
+./xml_parts/cmg/adcp_*.xml \
+./xml_parts/cmg/cmg_cdf.xml \
+footer.xml > datasets.xml

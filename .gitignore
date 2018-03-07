@@ -1,0 +1,11 @@
+/harvest/usgs-cmg-portal/
+logs/
+cache/
+bin/
+database/
+topology/
+export/
+iso_records/
+data/
+.h2/
+/erddap/data/

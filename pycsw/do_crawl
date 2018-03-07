@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir /opt/docker/pycsw/force/iso-records
+
+source activate ioos
+python /opt/docker/pycsw/usgs-cmg-portal/catalog_harvest/get_daily_iso.py
+python /opt/docker/pycsw/usgs-cmg-portal/catalog_harvest/get_ncml_daily_iso.py

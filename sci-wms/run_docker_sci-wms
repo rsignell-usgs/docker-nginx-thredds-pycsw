@@ -1,0 +1,4 @@
+docker run -d -p 7002:7002 -v /opt/docker/sci-wms/db:/srv/sci-wms/sciwms/db/ \
+ -v /opt/docker/sci-wms/topology:/srv/sci-wms/wms/topology \
+-e SCIWMS_USERNAME=admin -e SCIWMS_PASSWORD=tailpp1 \
+--name sci-wms axiom/sci-wms

@@ -1,0 +1,3777 @@
+<dataset type="EDDTableFromMultidimNcFiles" datasetID="pwrsys_5efe_26b5_aa06" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/sand/usgs/users/rsignell/data/ooi/endurance/pwrsys/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <removeMVRows>true</removeMVRows>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    <!-- sourceAttributes>
+        <att name="_NCProperties">version=1|netcdflibversion=4.4.1|hdf5libversion=1.8.17</att>
+        <att name="acknowledgement">National Science Foundation</att>
+        <att name="cdm_data_type">Station</att>
+        <att name="comment">Mooring ID: CE02SHSM-00004</att>
+        <att name="Conventions">CF-1.6,ACDD-1.3</att>
+        <att name="creator_email">cwingard@coas.oregonstate.edu</att>
+        <att name="creator_name">Christopher Wingard</att>
+        <att name="creator_url">http://oceanobservatories.org</att>
+        <att name="date_created">2017-03-27T18:29:00Z</att>
+        <att name="date_issued">2017-03-27T18:29:00Z</att>
+        <att name="date_metadata_modified">2017-03-27T18:29:00Z</att>
+        <att name="date_modified">2017-03-27T18:29:00Z</att>
+        <att name="featureType">timeSeries</att>
+        <att name="geospatial_bounds">POINT(-124.30379 44.63893)</att>
+        <att name="geospatial_bounds_crs">EPSG:4326</att>
+        <att name="geospatial_lat_max" type="double">44.63893</att>
+        <att name="geospatial_lat_min" type="double">44.63893</att>
+        <att name="geospatial_lat_resolution" type="long">0</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_lon_max" type="double">-124.30379</att>
+        <att name="geospatial_lon_min" type="double">-124.30379</att>
+        <att name="geospatial_lon_resolution" type="long">0</att>
+        <att name="geospatial_lon_units">degrees_east</att>
+        <att name="geospatial_vertical_max" type="double">0.0</att>
+        <att name="geospatial_vertical_min" type="double">0.0</att>
+        <att name="geospatial_vertical_positive">down</att>
+        <att name="geospatial_vertical_resolution">0</att>
+        <att name="geospatial_vertical_units">meters</att>
+        <att name="history">2017-03-27T18:29:00Z - pyaxiom - File created using pyaxiom</att>
+        <att name="institution">Coastal and Global Scales Nodes, (CGSN)</att>
+        <att name="ncei_template_version">NCEI_NetCDF_TimeSeries_Orthogonal_Template_v2.0</att>
+        <att name="project">Ocean Observatories Initiative</att>
+        <att name="references">http://oceanobservatories.org</att>
+        <att name="summary">Measures the status of the mooring power system controller, encompassing the batteries, recharging sources (wind and solar), and outputs.</att>
+        <att name="time_coverage_duration">PT86339S</att>
+        <att name="time_coverage_end">2017-03-24T23:59:14.611000</att>
+        <att name="time_coverage_resolution">PT60S</att>
+        <att name="time_coverage_start">2017-03-24T00:00:15.125000</att>
+        <att name="title">Mooring Power System Controller (PSC) Status Data</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station, longitude, latitude</att>
+        <att name="subsetVariables">station, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="cdm_data_type">timeSeries</att>
+        <att name="cdm_timeseries_variables">feature_type_instance, longitude, latitude</att>
+        <att name="subsetVariables">feature_type_instance, longitude, latitude, deploy_id</att>
+        <att name="Conventions">CF-1.6,ACDD-1.3, COARDS</att>
+        <att name="infoUrl">http://oceanobservatories.org</att>
+        <att name="institution">CGSN</att>
+        <att name="keywords">//www.opengis.net/def/crs/epsg/0/4326, 100c, 24v, access, bank, batteries, battery, battery1, battery2, battery_bank1_current, battery_bank1_temperature, battery_bank1_voltage, battery_bank2_current, battery_bank2_temperature, battery_bank2_voltage, battery_bank3_current, battery_bank3_temperature, battery_bank3_voltage, battery_bank4_current, battery_bank4_temperature, battery_bank4_voltage, battery_bank_1_current, battery_bank_1_temperature, battery_bank_1_voltage, battery_bank_2_current, battery_bank_2_temperature, battery_bank_2_voltage, battery_bank_3_current, battery_bank_3_voltage, battery_bank_4_current, battery_bank_4_temperature, battery_bank_4_voltage, blown, board, buoy, cell, cgsn, charge, charging, circuit, coastal, connect, control, controller, converter, critical, crs, current, currents, cvt, cvt_current, cvt_interlock, cvt_state, cvt_temperature, cvt_voltage, data, date, dcl, dcl_date_time_string, deploy_id, deployment, deployment_id, depth, discharging, down, due, each, eeprom, ef1, ef1_battery1_of_string1_overtemp, ef1_battery1_of_string2_overtemp, ef1_battery1_of_string3_overtemp, ef1_battery1_of_string4_overtemp, ef1_battery2_of_string1_overtemp, ef1_battery2_of_string2_overtemp, ef1_battery2_of_string3_overtemp, ef1_battery2_of_string4_overtemp, ef1_battery_string_1_charging_sensor_fault, ef1_battery_string_1_discharging_sensor_fault, ef1_battery_string_1_fuse_blown, ef1_battery_string_2_charging_sensor_fault, ef1_battery_string_2_discharging_sensor_fault, ef1_battery_string_2_fuse_blown, ef1_battery_string_3_charging_sensor_fault, ef1_battery_string_3_discharging_sensor_fault, ef1_battery_string_3_fuse_blown, ef1_battery_string_4_charging_sensor_fault, ef1_battery_string_4_discharging_sensor_fault, ef1_battery_string_4_fuse_blown, ef1_eeprom_access_fault, ef1_external_power_sensor_fault, ef1_hipwr_dc_dc_converter_fuse_blown, ef1_no_error, ef1_psc_hotel_power_sensor_fault, ef1_psc_internal_overtemp_fault, ef1_pv1_sensor_fault, ef1_pv2_sensor_fault, ef1_pv3_sensor_fault, ef1_pv4_sensor_fault, ef1_rtclk_access_fault, ef1_wt1_sensor_fault, ef1_wt2_sensor_fault, ef2, ef2_buoy_24v_power_over_voltage_fault, ef2_buoy_24v_power_sensor_fault, ef2_buoy_24v_power_under_voltage_fault, ef2_cvt_general_fault, ef2_cvt_shut_down_due_to_low_input_voltage, ef2_cvt_swg_fault, ef2_fc1_control_relay_fault, ef2_fc2_control_relay_fault, ef2_fuse_5v_blown_non_critical, ef2_no_error, ef2_psc_hard_reset_flag, ef2_psc_power_on_reset_flag, ef2_pv1_control_relay_fault, ef2_pv1_fuse_blown, ef2_pv2_control_relay_fault, ef2_pv2_fuse_blown, ef2_pv3_control_relay_fault, ef2_pv3_fuse_blown, ef2_pv4_control_relay_fault, ef2_pv4_fuse_blown, ef2_wt1_control_relay_fault, ef2_wt1_fuse_blown, ef2_wt2_control_relay_fault, ef2_wt2_fuse_blown, ef3, ef3_cvt_24v_hotel_power_sensor_fault, ef3_cvt_board_temp_over_100C, ef3_high_voltage_output_current_sensor_fault, ef3_high_voltage_output_voltage_sensor_fault, ef3_input_1_fuse_blown, ef3_input_1_sensor_fault, ef3_input_2_fuse_blown, ef3_input_2_sensor_fault, ef3_input_3_fuse_blown, ef3_input_3_sensor_fault, ef3_input_4_fuse_blown, ef3_input_4_sensor_fault, ef3_interlock_input_sensor_fault, ef3_interlock_output_supply_fuse_blown, ef3_interlock_status_1_sensor_fault, ef3_interlock_status_1_supply_fuse_blown, ef3_interlock_status_2_sensor_fault, ef3_interlock_status_2_supply_fuse_blown, ef3_interlock_supply_output_sensor_fault, ef3_n_swgf_occured, ef3_n_swgf_sensor_circuit_power_over_voltage, ef3_n_swgf_sensor_circuit_power_under_voltage, ef3_n_swgf_sensor_fault, ef3_no_error, ef3_output_sensor_circuit_power_over_voltage, ef3_output_sensor_circuit_power_under_voltage, ef3_over_5v_voltage, ef3_p_swgf_occured, ef3_p_swgf_sensor_circuit_power_over_voltage, ef3_p_swgf_sensor_circuit_power_under_voltage, ef3_p_swgf_sensor_fault, ef3_raw_24v_input_power_sensor_fault, ef3_under_5v_voltage, efo, efo_external_power, efo_fc1_connect, efo_fc2_connect, efo_hipwr_control, efo_hipwr_reset, efo_no_override, efo_pv1_connect, efo_pv2_connect, efo_pv3_connect, efo_pv4_connect, efo_wt1_connect, efo_wt2_connect, encompassing, error, error_flag1, error_flag2, error_flag3, error_flag_1, error_flag_2, error_flag_3, external, external_current, external_voltage, fault, fc1, fc2, feature, feature_type_instance, flag, fuel, fuel_cell1_current, fuel_cell1_state, fuel_cell1_voltage, fuel_cell2_current, fuel_cell2_state, fuel_cell2_voltage, fuel_cell_1_current, fuel_cell_1_state, fuel_cell_1_voltage, fuel_cell_2_current, fuel_cell_2_state, fuel_cell_2_voltage, fuel_cell_volume, fuse, general, global, ground, hard, high, hipwr, hotel, identifier, input, instance, interlock, internal, internal temperature, internal_current, internal_temperature, internal_voltage, latitude, longitude, low, main, main_current, main_voltage, measurement, measures, mooring, negative, nodes, non, occured, output, outputs, over, override, override_flag, overtemp, panel, percent, percent_charge, platform, positive, power, psc, pv1, pv2, pv3, pv4, quality, raw, recharging, relative, relay, reset, rtclk, scales, sea, seawater, seawater_ground_negative, seawater_ground_positive, seawater_ground_positve, seawater_ground_state, sensor, shut, solar, solar_panel1_current, solar_panel1_state, solar_panel1_voltage, solar_panel2_current, solar_panel2_state, solar_panel2_voltage, solar_panel3_current, solar_panel3_state, solar_panel3_voltage, solar_panel4_current, solar_panel4_state, solar_panel4_voltage, solar_panel_1_current, solar_panel_1_state, solar_panel_1_voltage, solar_panel_2_current, solar_panel_2_state, solar_panel_2_voltage, solar_panel_3_current, solar_panel_3_state, solar_panel_3_voltage, solar_panel_4_current, solar_panel_4_state, solar_panel_4_voltage, sources, stamp, state, statistics, status, string, string1, string2, string3, string4, supply, surface, swg, swgf, system, taxonomy, temperature, time, turbine, type, under, voltage, volume, water, wind, wind_turbine1_current, wind_turbine1_state, wind_turbine1_voltage, wind_turbine2_current, wind_turbine2_state, wind_turbine2_voltage, wind_turbine_1_current, wind_turbine_1_state, wind_turbine_1_voltage, wind_turbine_2_current, wind_turbine_2_state, wind_turbine_2_voltage, wt1, wt2</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>feature_type_instance</sourceName>
+        <destinationName>feature_type_instance</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">timeseries_id</att>
+            <att name="long_name">Identifier for each feature type instance</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="axis">Y</att>
+            <att name="long_name">sensor latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+            <att name="valid_max" type="double">44.63893</att>
+            <att name="valid_min" type="double">44.63893</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="axis">X</att>
+            <att name="long_name">sensor longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+            <att name="valid_max" type="double">-124.30379</att>
+            <att name="valid_min" type="double">-124.30379</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>crs</sourceName>
+        <destinationName>crs</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="epsg_code">EPSG:4326</att>
+            <att name="grid_mapping_name">latitude_longitude</att>
+            <att name="inverse_flattening" type="double">298.257223563</att>
+            <att name="long_name">http://www.opengis.net/def/crs/EPSG/0/4326</att>
+            <att name="semi_major_axis" type="double">6378137.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>platform</sourceName>
+        <destinationName>platform</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="definition">http://mmisw.org/ont/ioos/definition/stationID</att>
+            <att name="ioos_code">ce02shsm</att>
+            <att name="long_name">Measures the status of the mooring power system controller, encompassing the batteries, recharging sources (wind and solar), and outputs.</att>
+            <att name="short_name">Mooring Power System Controller (PSC) Status Data</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="axis">T</att>
+            <att name="calendar">gregorian</att>
+            <att name="long_name">time of measurement</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>z</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="axis">Z</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">z of the sensor relative to the water surface</att>
+            <att name="positive">down</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+            <att name="valid_max" type="double">0.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">-8000.0</att>
+            <att name="colorBarPalette">TopographyDepth</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank1_current</sourceName>
+        <destinationName>battery_bank1_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 1 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_1_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank1_temperature</sourceName>
+        <destinationName>battery_bank1_temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 1 Temperature</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_1_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">-10.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank1_voltage</sourceName>
+        <destinationName>battery_bank1_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 1 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_1_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank2_current</sourceName>
+        <destinationName>battery_bank2_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 2 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_2_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank2_temperature</sourceName>
+        <destinationName>battery_bank2_temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 2 Temperature</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_2_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">-10.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank2_voltage</sourceName>
+        <destinationName>battery_bank2_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 2 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_2_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank3_current</sourceName>
+        <destinationName>battery_bank3_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 3 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_3_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank3_temperature</sourceName>
+        <destinationName>battery_bank3_temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 3 Temperature</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_2_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">-10.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank3_voltage</sourceName>
+        <destinationName>battery_bank3_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 3 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_3_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank4_current</sourceName>
+        <destinationName>battery_bank4_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 4 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_4_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank4_temperature</sourceName>
+        <destinationName>battery_bank4_temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 4 Temperature</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_4_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">-10.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>battery_bank4_voltage</sourceName>
+        <destinationName>battery_bank4_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Battery Bank 4 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">battery_bank_4_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cvt_current</sourceName>
+        <destinationName>cvt_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">CVT Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">cvt_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cvt_interlock</sourceName>
+        <destinationName>cvt_interlock</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">CVT Interlock</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">cvt_interlock</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cvt_state</sourceName>
+        <destinationName>cvt_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">CVT State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">cvt_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cvt_temperature</sourceName>
+        <destinationName>cvt_temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">CVT Temperature</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">cvt_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">-10.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cvt_voltage</sourceName>
+        <destinationName>cvt_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">CVT Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">cvt_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dcl_date_time_string</sourceName>
+        <destinationName>dcl_date_time_string</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">DCL Date and Time Stamp</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">dcl_date_time_string</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>error_flag1</sourceName>
+        <destinationName>error_flag1</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">Error Flag 1</att>
+            <att name="standard_name">error_flag_1</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">0.1</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>error_flag2</sourceName>
+        <destinationName>error_flag2</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">Error Flag 2</att>
+            <att name="standard_name">error_flag_2</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">0.1</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>error_flag3</sourceName>
+        <destinationName>error_flag3</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">Error Flag 3</att>
+            <att name="standard_name">error_flag_3</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">0.1</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>external_current</sourceName>
+        <destinationName>external_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">External Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">external_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>external_voltage</sourceName>
+        <destinationName>external_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">External Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">external_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fuel_cell1_current</sourceName>
+        <destinationName>fuel_cell1_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Fuel Cell 1 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">fuel_cell_1_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fuel_cell1_state</sourceName>
+        <destinationName>fuel_cell1_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Fuel Cell 1 State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">fuel_cell_1_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fuel_cell1_voltage</sourceName>
+        <destinationName>fuel_cell1_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Fuel Cell 1 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">fuel_cell_1_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fuel_cell2_current</sourceName>
+        <destinationName>fuel_cell2_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Fuel Cell 2 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">fuel_cell_2_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fuel_cell2_state</sourceName>
+        <destinationName>fuel_cell2_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Fuel Cell 2 State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">fuel_cell_2_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fuel_cell2_voltage</sourceName>
+        <destinationName>fuel_cell2_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Fuel Cell 2 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">fuel_cell_2_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fuel_cell_volume</sourceName>
+        <destinationName>fuel_cell_volume</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Fuel Cell Volume</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">fuel_cell_volume</att>
+            <att name="units">mL</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>internal_current</sourceName>
+        <destinationName>internal_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Internal Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">internal_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>internal_temperature</sourceName>
+        <destinationName>internal_temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Internal Temperature</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Internal Temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">-10.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>internal_voltage</sourceName>
+        <destinationName>internal_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Internal Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">internal_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>main_current</sourceName>
+        <destinationName>main_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Main Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">main_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>main_voltage</sourceName>
+        <destinationName>main_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Main Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">main_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>override_flag</sourceName>
+        <destinationName>override_flag</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">Override Flag</att>
+            <att name="standard_name">override_flag</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>percent_charge</sourceName>
+        <destinationName>percent_charge</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Percent Charge</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">percent_charge</att>
+            <att name="units">percent</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>seawater_ground_negative</sourceName>
+        <destinationName>seawater_ground_negative</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Sea Water Ground Negative</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">seawater_ground_Negative</att>
+            <att name="units">uA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>seawater_ground_positve</sourceName>
+        <destinationName>seawater_ground_positve</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Sea Water Ground Positive</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">seawater_ground_positive</att>
+            <att name="units">uA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>seawater_ground_state</sourceName>
+        <destinationName>seawater_ground_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Sea Water Ground State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">seawater_ground_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel1_current</sourceName>
+        <destinationName>solar_panel1_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 1 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_1_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel1_state</sourceName>
+        <destinationName>solar_panel1_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 1 State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_1_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel1_voltage</sourceName>
+        <destinationName>solar_panel1_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 1 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_1_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel2_current</sourceName>
+        <destinationName>solar_panel2_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 2 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_2_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel2_state</sourceName>
+        <destinationName>solar_panel2_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 2 State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_2_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel2_voltage</sourceName>
+        <destinationName>solar_panel2_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 2 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_2_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel3_current</sourceName>
+        <destinationName>solar_panel3_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 3 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_3_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel3_state</sourceName>
+        <destinationName>solar_panel3_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 3 State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_3_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel3_voltage</sourceName>
+        <destinationName>solar_panel3_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 3 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_3_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel4_current</sourceName>
+        <destinationName>solar_panel4_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 4 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_4_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel4_state</sourceName>
+        <destinationName>solar_panel4_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 4 State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_4_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>solar_panel4_voltage</sourceName>
+        <destinationName>solar_panel4_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Solar Panel 4 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">solar_panel_4_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>wind_turbine1_current</sourceName>
+        <destinationName>wind_turbine1_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Wind Turbine 1 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">wind_turbine_1_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>wind_turbine1_state</sourceName>
+        <destinationName>wind_turbine1_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Wind Turbine 1 State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">wind_turbine_1_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>wind_turbine1_voltage</sourceName>
+        <destinationName>wind_turbine1_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Wind Turbine 1 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">wind_turbine_1_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>wind_turbine2_current</sourceName>
+        <destinationName>wind_turbine2_current</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Wind Turbine 2 Current</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">wind_turbine_2_current</att>
+            <att name="units">mA</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>wind_turbine2_state</sourceName>
+        <destinationName>wind_turbine2_state</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Wind Turbine 2 State</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">wind_turbine_2_state</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>wind_turbine2_voltage</sourceName>
+        <destinationName>wind_turbine2_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="double">-9.99999999E8</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Wind Turbine 2 Voltage</att>
+            <att name="missing_value" type="double">-9.99999999E8</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">wind_turbine_2_voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Wind</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>deploy_id</sourceName>
+        <destinationName>deploy_id</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Deployment ID</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">deployment_id</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_no_error</sourceName>
+        <destinationName>ef1_no_error</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 No Error (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">0.1</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery1_of_string1_overtemp</sourceName>
+        <destinationName>ef1_battery1_of_string1_overtemp</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery1 Of String1 Overtemp (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery2_of_string1_overtemp</sourceName>
+        <destinationName>ef1_battery2_of_string1_overtemp</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery2 Of String1 Overtemp (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery1_of_string2_overtemp</sourceName>
+        <destinationName>ef1_battery1_of_string2_overtemp</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery1 Of String2 Overtemp (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery2_of_string2_overtemp</sourceName>
+        <destinationName>ef1_battery2_of_string2_overtemp</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery2 Of String2 Overtemp (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery1_of_string3_overtemp</sourceName>
+        <destinationName>ef1_battery1_of_string3_overtemp</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery1 Of String3 Overtemp (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery2_of_string3_overtemp</sourceName>
+        <destinationName>ef1_battery2_of_string3_overtemp</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery2 Of String3 Overtemp (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery1_of_string4_overtemp</sourceName>
+        <destinationName>ef1_battery1_of_string4_overtemp</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery1 Of String4 Overtemp (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery2_of_string4_overtemp</sourceName>
+        <destinationName>ef1_battery2_of_string4_overtemp</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery2 Of String4 Overtemp (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_1_fuse_blown</sourceName>
+        <destinationName>ef1_battery_string_1_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 1 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_2_fuse_blown</sourceName>
+        <destinationName>ef1_battery_string_2_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 2 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_3_fuse_blown</sourceName>
+        <destinationName>ef1_battery_string_3_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 3 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_4_fuse_blown</sourceName>
+        <destinationName>ef1_battery_string_4_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 4 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_1_charging_sensor_fault</sourceName>
+        <destinationName>ef1_battery_string_1_charging_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 1 Charging Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_1_discharging_sensor_fault</sourceName>
+        <destinationName>ef1_battery_string_1_discharging_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 1 Discharging Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_2_charging_sensor_fault</sourceName>
+        <destinationName>ef1_battery_string_2_charging_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 2 Charging Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_2_discharging_sensor_fault</sourceName>
+        <destinationName>ef1_battery_string_2_discharging_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 2 Discharging Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_3_charging_sensor_fault</sourceName>
+        <destinationName>ef1_battery_string_3_charging_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 3 Charging Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_3_discharging_sensor_fault</sourceName>
+        <destinationName>ef1_battery_string_3_discharging_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 3 Discharging Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_4_charging_sensor_fault</sourceName>
+        <destinationName>ef1_battery_string_4_charging_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 4 Charging Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_battery_string_4_discharging_sensor_fault</sourceName>
+        <destinationName>ef1_battery_string_4_discharging_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Battery String 4 Discharging Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_pv1_sensor_fault</sourceName>
+        <destinationName>ef1_pv1_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Pv1 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_pv2_sensor_fault</sourceName>
+        <destinationName>ef1_pv2_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Pv2 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_pv3_sensor_fault</sourceName>
+        <destinationName>ef1_pv3_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Pv3 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_pv4_sensor_fault</sourceName>
+        <destinationName>ef1_pv4_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Pv4 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_wt1_sensor_fault</sourceName>
+        <destinationName>ef1_wt1_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Wt1 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_wt2_sensor_fault</sourceName>
+        <destinationName>ef1_wt2_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Wt2 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_eeprom_access_fault</sourceName>
+        <destinationName>ef1_eeprom_access_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Eeprom Access Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_rtclk_access_fault</sourceName>
+        <destinationName>ef1_rtclk_access_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Rtclk Access Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_external_power_sensor_fault</sourceName>
+        <destinationName>ef1_external_power_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 External Power Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_psc_hotel_power_sensor_fault</sourceName>
+        <destinationName>ef1_psc_hotel_power_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Psc Hotel Power Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_psc_internal_overtemp_fault</sourceName>
+        <destinationName>ef1_psc_internal_overtemp_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Psc Internal Overtemp Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef1_hipwr_dc_dc_converter_fuse_blown</sourceName>
+        <destinationName>ef1_hipwr_dc_dc_converter_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef1 Hipwr Dc Dc Converter Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_no_error</sourceName>
+        <destinationName>ef2_no_error</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 No Error (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">0.1</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_buoy_24v_power_sensor_fault</sourceName>
+        <destinationName>ef2_buoy_24v_power_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Buoy 24V Power Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_buoy_24v_power_over_voltage_fault</sourceName>
+        <destinationName>ef2_buoy_24v_power_over_voltage_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Buoy 24V Power Over Voltage Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_buoy_24v_power_under_voltage_fault</sourceName>
+        <destinationName>ef2_buoy_24v_power_under_voltage_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Buoy 24V Power Under Voltage Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_fuse_5v_blown_non_critical</sourceName>
+        <destinationName>ef2_fuse_5v_blown_non_critical</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Fuse 5V Blown Non Critical (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_wt1_control_relay_fault</sourceName>
+        <destinationName>ef2_wt1_control_relay_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Wt1 Control Relay Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_wt2_control_relay_fault</sourceName>
+        <destinationName>ef2_wt2_control_relay_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Wt2 Control Relay Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_pv1_control_relay_fault</sourceName>
+        <destinationName>ef2_pv1_control_relay_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Pv1 Control Relay Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_pv2_control_relay_fault</sourceName>
+        <destinationName>ef2_pv2_control_relay_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Pv2 Control Relay Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_pv3_control_relay_fault</sourceName>
+        <destinationName>ef2_pv3_control_relay_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Pv3 Control Relay Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_pv4_control_relay_fault</sourceName>
+        <destinationName>ef2_pv4_control_relay_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Pv4 Control Relay Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_fc1_control_relay_fault</sourceName>
+        <destinationName>ef2_fc1_control_relay_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Fc1 Control Relay Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_fc2_control_relay_fault</sourceName>
+        <destinationName>ef2_fc2_control_relay_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Fc2 Control Relay Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_cvt_swg_fault</sourceName>
+        <destinationName>ef2_cvt_swg_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Cvt Swg Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_cvt_general_fault</sourceName>
+        <destinationName>ef2_cvt_general_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Cvt General Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Taxonomy</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_psc_hard_reset_flag</sourceName>
+        <destinationName>ef2_psc_hard_reset_flag</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Psc Hard Reset Flag (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_psc_power_on_reset_flag</sourceName>
+        <destinationName>ef2_psc_power_on_reset_flag</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Psc Power On Reset Flag (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_wt1_fuse_blown</sourceName>
+        <destinationName>ef2_wt1_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Wt1 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_wt2_fuse_blown</sourceName>
+        <destinationName>ef2_wt2_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Wt2 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_pv1_fuse_blown</sourceName>
+        <destinationName>ef2_pv1_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Pv1 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_pv2_fuse_blown</sourceName>
+        <destinationName>ef2_pv2_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Pv2 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_pv3_fuse_blown</sourceName>
+        <destinationName>ef2_pv3_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Pv3 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_pv4_fuse_blown</sourceName>
+        <destinationName>ef2_pv4_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Pv4 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef2_cvt_shut_down_due_to_low_input_voltage</sourceName>
+        <destinationName>ef2_cvt_shut_down_due_to_low_input_voltage</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef2 Cvt Shut Down Due To Low Input Voltage (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_no_error</sourceName>
+        <destinationName>ef3_no_error</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 No Error (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">0.1</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_cvt_board_temp_over_100C</sourceName>
+        <destinationName>ef3_cvt_board_temp_over_100C</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Cvt Board Temp Over 100C (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_interlock_output_supply_fuse_blown</sourceName>
+        <destinationName>ef3_interlock_output_supply_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Interlock Output Supply Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_interlock_status_1_supply_fuse_blown</sourceName>
+        <destinationName>ef3_interlock_status_1_supply_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Interlock Status 1 Supply Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_interlock_status_2_supply_fuse_blown</sourceName>
+        <destinationName>ef3_interlock_status_2_supply_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Interlock Status 2 Supply Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_input_1_fuse_blown</sourceName>
+        <destinationName>ef3_input_1_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Input 1 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_input_2_fuse_blown</sourceName>
+        <destinationName>ef3_input_2_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Input 2 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_input_3_fuse_blown</sourceName>
+        <destinationName>ef3_input_3_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Input 3 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_input_4_fuse_blown</sourceName>
+        <destinationName>ef3_input_4_fuse_blown</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Input 4 Fuse Blown (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_over_5v_voltage</sourceName>
+        <destinationName>ef3_over_5v_voltage</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Over 5V Voltage (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_under_5v_voltage</sourceName>
+        <destinationName>ef3_under_5v_voltage</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Under 5V Voltage (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_output_sensor_circuit_power_over_voltage</sourceName>
+        <destinationName>ef3_output_sensor_circuit_power_over_voltage</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Output Sensor Circuit Power Over Voltage (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_output_sensor_circuit_power_under_voltage</sourceName>
+        <destinationName>ef3_output_sensor_circuit_power_under_voltage</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Output Sensor Circuit Power Under Voltage (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_p_swgf_sensor_circuit_power_over_voltage</sourceName>
+        <destinationName>ef3_p_swgf_sensor_circuit_power_over_voltage</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 P Swgf Sensor Circuit Power Over Voltage (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_p_swgf_sensor_circuit_power_under_voltage</sourceName>
+        <destinationName>ef3_p_swgf_sensor_circuit_power_under_voltage</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 P Swgf Sensor Circuit Power Under Voltage (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_n_swgf_sensor_circuit_power_over_voltage</sourceName>
+        <destinationName>ef3_n_swgf_sensor_circuit_power_over_voltage</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 N Swgf Sensor Circuit Power Over Voltage (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_n_swgf_sensor_circuit_power_under_voltage</sourceName>
+        <destinationName>ef3_n_swgf_sensor_circuit_power_under_voltage</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 N Swgf Sensor Circuit Power Under Voltage (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_raw_24v_input_power_sensor_fault</sourceName>
+        <destinationName>ef3_raw_24v_input_power_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Raw 24V Input Power Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_cvt_24v_hotel_power_sensor_fault</sourceName>
+        <destinationName>ef3_cvt_24v_hotel_power_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Cvt 24V Hotel Power Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_interlock_supply_output_sensor_fault</sourceName>
+        <destinationName>ef3_interlock_supply_output_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Interlock Supply Output Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_interlock_status_1_sensor_fault</sourceName>
+        <destinationName>ef3_interlock_status_1_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Interlock Status 1 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_interlock_status_2_sensor_fault</sourceName>
+        <destinationName>ef3_interlock_status_2_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Interlock Status 2 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_interlock_input_sensor_fault</sourceName>
+        <destinationName>ef3_interlock_input_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Interlock Input Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_p_swgf_occured</sourceName>
+        <destinationName>ef3_p_swgf_occured</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 P Swgf Occured (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_n_swgf_occured</sourceName>
+        <destinationName>ef3_n_swgf_occured</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 N Swgf Occured (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_input_1_sensor_fault</sourceName>
+        <destinationName>ef3_input_1_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Input 1 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_input_2_sensor_fault</sourceName>
+        <destinationName>ef3_input_2_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Input 2 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_input_3_sensor_fault</sourceName>
+        <destinationName>ef3_input_3_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Input 3 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_input_4_sensor_fault</sourceName>
+        <destinationName>ef3_input_4_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 Input 4 Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_high_voltage_output_current_sensor_fault</sourceName>
+        <destinationName>ef3_high_voltage_output_current_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 High Voltage Output Current Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_high_voltage_output_voltage_sensor_fault</sourceName>
+        <destinationName>ef3_high_voltage_output_voltage_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 High Voltage Output Voltage Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_p_swgf_sensor_fault</sourceName>
+        <destinationName>ef3_p_swgf_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 P Swgf Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ef3_n_swgf_sensor_fault</sourceName>
+        <destinationName>ef3_n_swgf_sensor_fault</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Ef3 N Swgf Sensor Fault (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_no_override</sourceName>
+        <destinationName>efo_no_override</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo No Override (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_wt1_connect</sourceName>
+        <destinationName>efo_wt1_connect</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Wt1 Connect (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_wt2_connect</sourceName>
+        <destinationName>efo_wt2_connect</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Wt2 Connect (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_pv1_connect</sourceName>
+        <destinationName>efo_pv1_connect</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Pv1 Connect (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_pv2_connect</sourceName>
+        <destinationName>efo_pv2_connect</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Pv2 Connect (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_pv3_connect</sourceName>
+        <destinationName>efo_pv3_connect</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Pv3 Connect (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_pv4_connect</sourceName>
+        <destinationName>efo_pv4_connect</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Pv4 Connect (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_fc1_connect</sourceName>
+        <destinationName>efo_fc1_connect</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Fc1 Connect (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_fc2_connect</sourceName>
+        <destinationName>efo_fc2_connect</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Fc2 Connect (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_hipwr_control</sourceName>
+        <destinationName>efo_hipwr_control</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Hipwr Control (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_hipwr_reset</sourceName>
+        <destinationName>efo_hipwr_reset</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo Hipwr Reset (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>efo_external_power</sourceName>
+        <destinationName>efo_external_power</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">1000</att>
+            <att name="_FillValue" type="int">-999999999</att>
+            <att name="ancillary_variables">platform</att>
+            <att name="coordinates">time z latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="grid_mapping">crs</att>
+            <att name="long_name">Efo External Power (1)</att>
+            <att name="missing_value" type="int">-999999999</att>
+            <att name="platform">platform</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+
+

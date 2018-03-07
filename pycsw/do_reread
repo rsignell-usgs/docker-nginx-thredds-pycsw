@@ -1,0 +1,13 @@
+#!/bin/bash
+
+WAF_TOPDIR='/usgs/data0/iso/iso_records'
+PYCSW_CONFIG='/opt/pycsw/default.cfg'
+
+# delete all records from DB
+#python /opt/pycsw/bin/pycsw-admin.py -c delete_records -f $PYCSW_CONFIG -y
+sqlite3 records.db 'delete from records'
+# pycsw uses a different environment
+source deactivate 
+source activate pycsw
+# load all records into DB
+python /opt/pycsw/bin/pycsw-admin.py -c load_records -f $PYCSW_CONFIG -p $WAF_TOPDIR -r

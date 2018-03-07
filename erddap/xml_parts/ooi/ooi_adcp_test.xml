@@ -1,0 +1,98 @@
+<dataset active="true" datasetID="PIONEER_ADCP_TELEMETERED_CP02PMCI_D00001" type="EDDGridFromNcFiles">
+    <reloadEveryNMinutes>60</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/sand/usgs/users/rsignell/data/ooi/pioneer/adcp/tel/</fileDir>
+    <fileNameRegex>PIONEER_ADCP_TELEMETERED_CP02PMCI_D00001.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <matchAxisNDigits>20</matchAxisNDigits>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    
+    <addAttributes>
+        <att name="cdm_data_type">Grid</att>
+        <att name="Conventions">CF-1.6, COARDS, ACDD-1.3</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">Rutgers University</att>
+        <att name="keywords">beam, circulation, currents, data, depth, eastward, eastward_sea_water_velocity, echo, ei1, ei2, ei3, ei4, error, intensity, local, northward, northward_sea_water_velocity, ocean, oceans,
+            Oceans &gt; Ocean Circulation &gt; Ocean Currents,
+            sea, seawater, source, statistics, time, u, upward, upward_sea_water_velocity, v, velocity, vertical, w, water</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="summary">Data from OOI  Pioneer Array ADCP</att>
+        <att name="title">Data from OOI  Pioneer Array ADCP</att>
+    </addAttributes>
+    <axisVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </axisVariable>
+    
+    <axisVariable>
+        <sourceName>range</sourceName>
+        <destinationName>depth</destinationName>
+        
+        <addAttributes>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Depth</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+        </addAttributes>
+    </axisVariable>
+    <dataVariable>
+        <sourceName>u</sourceName>
+        <destinationName>u</destinationName>
+        <dataType>double</dataType>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="colorBarMaximum" type="double">0.5</att>
+            <att name="colorBarMinimum" type="double">-0.5</att>
+            <att name="ioos_category">Currents</att>	
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>v</sourceName>
+        <destinationName>v</destinationName>
+        <dataType>double</dataType>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="colorBarMaximum" type="double">0.5</att>
+            <att name="colorBarMinimum" type="double">-0.5</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>w</sourceName>
+        <destinationName>w</destinationName>
+        <dataType>double</dataType>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="colorBarMaximum" type="double">0.5</att>
+            <att name="colorBarMinimum" type="double">-0.5</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>err</sourceName>
+        <destinationName>err</destinationName>
+        <dataType>double</dataType>
+        
+        <addAttributes>
+            <att name="_ChunkSize">null</att>
+            <att name="colorBarMaximum" type="double">50.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    
+</dataset>
+

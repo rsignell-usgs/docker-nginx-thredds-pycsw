@@ -1,0 +1,1126 @@
+<dataset type="EDDTableFromMultidimNcFiles" datasetID="rich" active="true">
+    <reloadEveryNMinutes>1440</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/sand/usgs/users/rsignell/data/joe/</fileDir>
+    <fileNameRegex>summary_allTB2006.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <removeMVRows>true</removeMVRows>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <!-- sourceAttributes>
+        <att name="cdm_data_type">TimeSeries</att>
+        <att name="Conventions">CF-1.6</att>
+        <att name="featureType">timeSeries</att>
+        <att name="institution">WHOI</att>
+        <att name="summary">Phytoplankton concentration by class derived from images collected by Imaging FlowCytobot
+</att>
+        <att name="title">Phytoplankton concentration by class</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station, longitude, latitude</att>
+        <att name="subsetVariables">station, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="cdm_timeseries_variables">timeseries, latitude, longitude, depth, platform, instrument</att>
+        <att name="Conventions">CF-1.6, COARDS, ACDD-1.3</att>
+        <att name="creator_name">WHOI</att>
+        <att name="creator_type">institution</att>
+        <att name="creator_url">http://www.whoi.edu/</att>
+        <att name="crs">EPSG:4326</att>
+        <att name="infoUrl">http://www.whoi.edu/</att>
+        <att name="keywords">array, array-data, asit, asterionellopsis, bad, cerataulina, ceratium, chaetoceros, ciliate, ciliate_mix, class, clusterflagellate, comprehensive, concentration, corethron, coscinodiscus, crs, cylindrotheca, dactfragcerataul, dactyliosolen, data, depth, detritus, dictyocha, dino30, dinobryon, dinophysis, dirty, dissolved, dissolved nutrients, ditylum, elongated, ephemera, eucampia, euglena, flaccida, flowcytobot, gonyaulax, guinardia, guinardia_flaccida, guinardia_striata, gyrodinium, hemiaulus, hole, identifier, imaging, institution, instrument, kiteflagellates, laboea, large, latitude, lauderia, leptocylindrus, licmophora, longitude, mix, mix_elongated, mvco, myrionecta, nutrients, oceanographic, odontella, paralia, pennate, phaeocystis, phytoplankton, platform, pleurosigma, prorocentrum, pseudonitzschia, pyramimonas, quality, rhizosolenia, skeletonema, stephanopyxis, stewardship, striata, system, thalassionema, thalassiosira, thalassiosira_dirty, time, timeseries, tintinnid, unclassified, whoi, woods</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="subsetVariables">timeseries, latitude, longitude, depth, platform, instrument, unclassified</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>timeseries</sourceName>
+        <destinationName>timeseries</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">timeseries_id</att>
+            <att name="long_name">timeseries</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="axis">Y</att>
+            <att name="long_name">latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+            <att name="valid_max" type="double">90.0</att>
+            <att name="valid_min" type="double">-90.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Latitude</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="axis">X</att>
+            <att name="long_name">longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+            <att name="valid_max" type="double">180.0</att>
+            <att name="valid_min" type="double">-180.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Longitude</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="axis">Z</att>
+            <att name="long_name">depth</att>
+            <att name="positive">down</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+            <att name="valid_max" type="double">10971.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">-8000.0</att>
+            <att name="colorBarPalette">TopographyDepth</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>platform</sourceName>
+        <destinationName>platform</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">MVCO ASIT</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>instrument</sourceName>
+        <destinationName>instrument</destinationName>
+        <dataType>char</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">Imaging FlowCytobot</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="axis">T</att>
+            <att name="calendar">gregorian</att>
+            <att name="long_name">time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Asterionellopsis</sourceName>
+        <destinationName>Asterionellopsis</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Asterionellopsis</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Asterionellopsis</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cerataulina</sourceName>
+        <destinationName>Cerataulina</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Cerataulina</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Cerataulina</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ceratium</sourceName>
+        <destinationName>Ceratium</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Ceratium</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Ceratium</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Chaetoceros</sourceName>
+        <destinationName>Chaetoceros</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Chaetoceros</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Chaetoceros</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Corethron</sourceName>
+        <destinationName>Corethron</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Corethron</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Corethron</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Coscinodiscus</sourceName>
+        <destinationName>Coscinodiscus</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Coscinodiscus</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Coscinodiscus</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cylindrotheca</sourceName>
+        <destinationName>Cylindrotheca</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Cylindrotheca</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Cylindrotheca</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DactFragCerataul</sourceName>
+        <destinationName>DactFragCerataul</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">DactFragCerataul</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">DactFragCerataul</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Dactyliosolen</sourceName>
+        <destinationName>Dactyliosolen</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Dactyliosolen</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Dactyliosolen</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Dictyocha</sourceName>
+        <destinationName>Dictyocha</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Dictyocha</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Dictyocha</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Dinobryon</sourceName>
+        <destinationName>Dinobryon</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Dinobryon</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Dinobryon</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Dinophysis</sourceName>
+        <destinationName>Dinophysis</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Dinophysis</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Dinophysis</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ditylum</sourceName>
+        <destinationName>Ditylum</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Ditylum</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Ditylum</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ephemera</sourceName>
+        <destinationName>Ephemera</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Ephemera</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Ephemera</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Eucampia</sourceName>
+        <destinationName>Eucampia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Eucampia</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Eucampia</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Euglena</sourceName>
+        <destinationName>Euglena</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Euglena</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Euglena</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Gonyaulax</sourceName>
+        <destinationName>Gonyaulax</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Gonyaulax</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Gonyaulax</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Guinardia</sourceName>
+        <destinationName>Guinardia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Guinardia</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Guinardia</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Guinardia_flaccida</sourceName>
+        <destinationName>Guinardia_flaccida</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Guinardia_flaccida</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Guinardia_flaccida</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Guinardia_striata</sourceName>
+        <destinationName>Guinardia_striata</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Guinardia_striata</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Guinardia_striata</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Gyrodinium</sourceName>
+        <destinationName>Gyrodinium</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Gyrodinium</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Gyrodinium</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Hemiaulus</sourceName>
+        <destinationName>Hemiaulus</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Hemiaulus</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Hemiaulus</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Laboea</sourceName>
+        <destinationName>Laboea</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Laboea</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Laboea</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Lauderia</sourceName>
+        <destinationName>Lauderia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Lauderia</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Lauderia</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Leptocylindrus</sourceName>
+        <destinationName>Leptocylindrus</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Leptocylindrus</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Leptocylindrus</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Licmophora</sourceName>
+        <destinationName>Licmophora</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Licmophora</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Licmophora</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Myrionecta</sourceName>
+        <destinationName>Myrionecta</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Myrionecta</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Myrionecta</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Odontella</sourceName>
+        <destinationName>Odontella</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Odontella</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Odontella</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Paralia</sourceName>
+        <destinationName>Paralia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Paralia</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Paralia</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Phaeocystis</sourceName>
+        <destinationName>Phaeocystis</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Phaeocystis</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Phaeocystis</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Pleurosigma</sourceName>
+        <destinationName>Pleurosigma</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Pleurosigma</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Pleurosigma</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Prorocentrum</sourceName>
+        <destinationName>Prorocentrum</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Prorocentrum</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Prorocentrum</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Pseudonitzschia</sourceName>
+        <destinationName>Pseudonitzschia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Pseudonitzschia</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Pseudonitzschia</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Pyramimonas</sourceName>
+        <destinationName>Pyramimonas</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Pyramimonas</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Pyramimonas</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Rhizosolenia</sourceName>
+        <destinationName>Rhizosolenia</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Rhizosolenia</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Rhizosolenia</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Skeletonema</sourceName>
+        <destinationName>Skeletonema</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Skeletonema</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Skeletonema</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Stephanopyxis</sourceName>
+        <destinationName>Stephanopyxis</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Stephanopyxis</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Stephanopyxis</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Thalassionema</sourceName>
+        <destinationName>Thalassionema</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Thalassionema</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Thalassionema</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Thalassiosira</sourceName>
+        <destinationName>Thalassiosira</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Thalassiosira</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Thalassiosira</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Thalassiosira_dirty</sourceName>
+        <destinationName>Thalassiosira_dirty</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">Thalassiosira_dirty</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">Thalassiosira_dirty</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bad</sourceName>
+        <destinationName>bad</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">bad</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">bad</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ciliate_mix</sourceName>
+        <destinationName>ciliate_mix</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">ciliate_mix</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">ciliate_mix</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ciliate Mix</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>clusterflagellate</sourceName>
+        <destinationName>clusterflagellate</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">clusterflagellate</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">clusterflagellate</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>detritus</sourceName>
+        <destinationName>detritus</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">detritus</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">detritus</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dino30</sourceName>
+        <destinationName>dino30</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">dino30</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">dino30</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Dissolved Nutrients</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>kiteflagellates</sourceName>
+        <destinationName>kiteflagellates</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">kiteflagellates</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">kiteflagellates</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mix</sourceName>
+        <destinationName>mix</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">mix</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">mix</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mix_elongated</sourceName>
+        <destinationName>mix_elongated</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">mix_elongated</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">mix_elongated</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Mix Elongated</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pennate</sourceName>
+        <destinationName>pennate</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">pennate</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">pennate</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>tintinnid</sourceName>
+        <destinationName>tintinnid</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">tintinnid</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">tintinnid</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>unclassified</sourceName>
+        <destinationName>unclassified</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-9999.9</att>
+            <att name="coordinates">time depth latitude longitude</att>
+            <att name="grid_mapping">crs</att>
+            <att name="instrument">instrument</att>
+            <att name="long_name">unclassified</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">unclassified</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>

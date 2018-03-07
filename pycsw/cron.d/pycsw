@@ -1,0 +1,17 @@
+SHELL=/bin/bash
+PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Wipe at 10 minutes past midnight
+10 00 * * * pycsw pycsw_wipe 2>&1 | logger -t pycsw_wipe
+
+# Load static records
+11 */1 * * * pycsw pycsw_load 2>&1 | logger -t pycsw_load
+
+# Force dynamic records
+12 */1 * * * pycsw pycsw_force 2>&1 | logger -t pycsw_force
+
+# Optimize
+13 */1 * * * pycsw pycsw_optimize 2>&1 | logger -t pycsw_optimize
+
+# Export
+14 */1 * * * pycsw pycsw_export 2>&1 | logger -t pycsw_export

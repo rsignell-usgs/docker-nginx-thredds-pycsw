@@ -1,0 +1,8 @@
+# run container
+docker-compose up -d tds-dev   
+
+# stop container
+docker-compose stop tds-dev
+
+# remove the container  (say, if there is a new version of thredds)
+docker-compose rm -rf tds-dev

@@ -1,0 +1,74 @@
+# CHEAT-SHEET
+#
+# start container:
+#   docker-compose up -d tds
+#
+# stop container:
+#   docker-compose stop tds
+#
+# remove container
+#   docker-compose rm -f tds
+#
+# login to container 
+#   docker exec -it tds bash
+# 
+# reload nginx without restarting
+# docker exec nginx /etc/init.d/nginx reload
+
+version: '3.1'
+
+
+
+services:
+
+  ###
+  # nginx: nginx with auto-renewing letsencrypt certs
+  ###
+  nginx:
+    image: bradjonesllc/docker-nginx-letsencrypt
+    container_name: nginx
+    ports: 
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /opt/docker/nginx/dhparam:/etc/ssl/dhparam 
+      - /opt/docker/nginx/letsencrypt:/etc/letsencrypt 
+      - /opt/docker/nginx/html:/etc/nginx/html
+      - /opt/docker/nginx/conf.d/services.conf:/etc/nginx/conf.d/services.conf
+      - /opt/docker/nginx/conf.d/include/cors.include:/etc/nginx/conf.d/include/cors.include
+    environment:
+      - "CERTS=js-169-194.jetstream-cloud.org"
+      - "EMAIL=rsignell@usgs.gov"
+
+  ###
+  # tds:  THREDDS Data Server- Stable
+  ###
+  tds:
+    image: unidata/thredds-docker:latest
+    container_name: tds
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/docker/tds/tomcat/logs/:/usr/local/tomcat/logs/
+      - /opt/docker/tds/tomcat/conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - /opt/docker/tds/thredds/:/usr/local/tomcat/content/thredds
+      - /data/:/data/
+    env_file:
+      - "thredds.env"
+
+
+  ###
+  # pycsw: pycsw Production
+  ###
+
+  pycsw:
+    image: axiom/docker-pycsw
+    container_name: pycsw
+    ports:
+      - "8000:8000"
+    volumes:
+      - /opt/docker/pycsw/usgs-cmg.cfg:/opt/pycsw/default.cfg
+      - /opt/docker/pycsw/force:/force 
+      - /opt/docker/pycsw/export:/export
+      - /opt/docker/pycsw/store:/store
+      - /opt/docker/pycsw/database:/database

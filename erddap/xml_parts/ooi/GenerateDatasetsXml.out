@@ -1,0 +1,105 @@
+<dataset type="EDDGridFromNcFiles" datasetID="phsen_2e2d_a110_30fa" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/sand/usgs/users/rsignell/data/ooi/endurance/phsen/</fileDir>
+    <fileNameRegex>20161012.phsen.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <matchAxisNDigits>20</matchAxisNDigits>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    <!-- sourceAttributes>
+        <att name="acknowledgement">National Science Foundation</att>
+        <att name="cdm_data_type">Station</att>
+        <att name="comment">Mooring ID: CE02SHSM-00004</att>
+        <att name="Conventions">CF-1.6,ACDD-1.3</att>
+        <att name="creator_email">cwingard@coas.oregonstate.edu</att>
+        <att name="creator_name">Christopher Wingard</att>
+        <att name="creator_url">http://oceanobservatories.org</att>
+        <att name="date_created">2017-02-24T23:19:00Z</att>
+        <att name="date_issued">2017-02-24T23:19:00Z</att>
+        <att name="date_metadata_modified">2017-02-24T23:19:00Z</att>
+        <att name="date_modified">2017-02-24T23:19:00Z</att>
+        <att name="featureType">timeSeries</att>
+        <att name="geospatial_bounds">POINT(-124.0 44.0)</att>
+        <att name="geospatial_bounds_crs">4326</att>
+        <att name="geospatial_lat_max" type="double">44.0</att>
+        <att name="geospatial_lat_min" type="double">44.0</att>
+        <att name="geospatial_lat_resolution" type="int">0</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_lon_max" type="double">-124.0</att>
+        <att name="geospatial_lon_min" type="double">-124.0</att>
+        <att name="geospatial_lon_resolution" type="int">0</att>
+        <att name="geospatial_lon_units">degrees_east</att>
+        <att name="geospatial_vertical_max" type="double">7.0</att>
+        <att name="geospatial_vertical_min" type="double">7.0</att>
+        <att name="geospatial_vertical_positive">down</att>
+        <att name="geospatial_vertical_resolution">0</att>
+        <att name="geospatial_vertical_units">meters</att>
+        <att name="history">Tue Mar  7 14:11:33 2017: ncks -v light_measurements 20161012.phsen.nc light.nc
+2017-02-24T23:19:00Z - pyaxiom - File created using pyaxiom</att>
+        <att name="institution">Coastal and Global Scales Nodes, (CGSN)</att>
+        <att name="ncei_template_version">NCEI_NetCDF_TimeSeries_Orthogonal_Template_v2.0</att>
+        <att name="NCO">&quot;4.6.4&quot;</att>
+        <att name="project">Ocean Observatories Initiative</att>
+        <att name="references">http://oceanobservatories.org</att>
+        <att name="summary">Measures the seawater pH from the Sunburst Sensors SAMI2-pH Instrument).</att>
+        <att name="time_coverage_duration">PT82802S</att>
+        <att name="time_coverage_end">2016-09-27T23:30:21.342000</att>
+        <att name="time_coverage_resolution">PT3600S</att>
+        <att name="time_coverage_start">2016-09-27T00:30:19.655000</att>
+        <att name="title">Seawater pH from PHSEN</att>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="title">Seawater pH grid from PHSEN</att>
+        <att name="cdm_data_type">Grid</att>
+        <att name="Conventions">CF-1.6,ACDD-1.3, COARDS</att>
+        <att name="infoUrl">http://oceanobservatories.org</att>
+        <att name="institution">CGSN</att>
+        <att name="keywords">array, cgsn, data, light, light_measurements, measurements, phsen, sea, seawater, time, water</att>
+        <att name="license">[standard]</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+    </addAttributes>
+    <axisVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <!-- sourceAttributes>
+            <att name="axis">T</att>
+            <att name="calendar">gregorian</att>
+            <att name="long_name">time of measurement</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </axisVariable>
+    <axisVariable>
+        <sourceName>light</sourceName>
+        <destinationName>light</destinationName>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Light</att>
+        </addAttributes>
+    </axisVariable>
+    <dataVariable>
+        <sourceName>light_measurements</sourceName>
+        <destinationName>light_measurements</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">time z longitude latitude</att>
+            <att name="long_name">Light Measurements Array</att>
+            <att name="standard_name">light_measurements</att>
+            <att name="units">counts</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+
+

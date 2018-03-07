@@ -1,0 +1,12 @@
+#!/bin/bash
+
+WAF_TOPDIR='/usgs/data0/iso/iso_records'
+PYCSW_CONFIG='/opt/pycsw/default.cfg'
+
+python /opt/pycsw/usgs-cmg-portal/catalog_harvest/get_ncml_daily_iso.py
+
+# pycsw uses a different environment
+source deactivate 
+source activate pycsw
+# load all records into DB
+python /opt/pycsw/bin/pycsw-admin.py -c load_records -f $PYCSW_CONFIG -p $WAF_TOPDIR -r

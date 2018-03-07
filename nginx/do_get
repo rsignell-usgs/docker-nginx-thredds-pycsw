@@ -1,0 +1,7 @@
+docker run -d \
+    -e CERTS=js-169-194.jetstream-cloud.org \
+    -e EMAIL=rsignell@usgs.gov \
+    -v /opt/docker/nginx/dhparam:/etc/ssl/dhparam \
+    -v /opt/docker/nginx/letsencrypt:/etc/letsencrypt \
+    -p 80:80 -p 443:443 \
+    bradjonesllc/docker-nginx-letsencrypt

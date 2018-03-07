@@ -1,0 +1,166 @@
+<dataset type="EDDTableFromNcCFFiles" datasetID="testing_c9e9_2e31_c6dc" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/sand/usgs/users/rsignell/data/cmg/testing/</fileDir>
+    <fileNameRegex>Global_1p0deg_Best.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    <!-- sourceAttributes>
+        <att name="cdm_data_type">TimeSeries</att>
+        <att name="cdm_timeseries_variables">latitude, longitude, station_id, station_description</att>
+        <att name="Conventions">CF-1.6</att>
+        <att name="featureType">timeSeries</att>
+        <att name="geospatial_lat_max" type="double">60.6105</att>
+        <att name="geospatial_lat_min" type="double">60.6095</att>
+        <att name="geospatial_lon_max" type="double">-38.259499999999996</att>
+        <att name="geospatial_lon_min" type="double">-38.2605</att>
+        <att name="history">Written by CFPointWriter</att>
+        <att name="subsetVariables">latitude, longitude, station_id, station_description</att>
+        <att name="time_coverage_end">2017-02-26T12:00:00Z</att>
+        <att name="time_coverage_start">2017-02-06T00:00:00Z</att>
+        <att name="title">Extract Points data from Grid file /data/ldm/pub/native/grid/FNMOC/WW3/Global_1p0deg/FNMOC_WW3_Global_1p0deg.ncx3</att>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="Conventions">CF-1.6, COARDS, ACDD-1.3</att>
+        <att name="creator_email">CSO.navo.fct@navy.mil</att>
+        <att name="creator_name">Naval Research Lab (NRL) NAVOCEANO</att>
+        <att name="creator_url">http://www.usno.navy.mil/NAVO</att>
+        <att name="infoUrl">http://www.usno.navy.mil/NAVO</att>
+        <att name="institution">Naval Research Lab (NRL) NAVOCEANO</att>
+        <att name="keywords">/data/ldm/pub/native/grid/fnmoc/ww3/global, 1p0deg, 1p0deg.ncx3, 1p0deg/fnmoc, actual, angle, are, average, center, clockwise, coming, crests, data, description, direction, equal, extract, fictitious, file, fixed, fleet, fnmoc, forecast, forecasting, global, grib, grid, ground, height, highest, identifier, lab, laboratory, latitude, ldm, longitude, measured, meteorology, name, native, naval, navoceano, north, nrl, numerical, observation, ocean, oceanographic, oceanography, oceans,
+Oceans &gt; Ocean Waves &gt; Significant Wave Height,
+Oceans &gt; Ocean Waves &gt; Wave Speed/Direction,
+office, pass, period, platform, platform_name, point, points, pr_wav_dir_surface, pr_wav_per_surface, primary, pub, quantity, required, research, sea, sea_surface_wave_from_direction, sea_surface_wave_significant_height, seawater, sig_wav_ht_surface, significant, speed, station, station_description, station_id, successive, surface, surface waves, that, third, time, true, two, water, wave, waves, which, with, ww3</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="summary">Extract Points data from Grid file /data/ldm/pub/native/grid/FNMOC/WW3/Global_1p0deg/FNMOC_WW3_Global_1p0deg.ncx3</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">station latitude</att>
+            <att name="units">degrees_north</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="standard_name">latitude</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">station longitude</att>
+            <att name="units">degrees_east</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="standard_name">longitude</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station_id</sourceName>
+        <destinationName>station_id</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">timeseries_id</att>
+            <att name="long_name">station identifier</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station_description</sourceName>
+        <destinationName>station_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">station description</att>
+            <att name="standard_name">platform_name</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="long_name">GRIB forecast or observation time</att>
+            <att name="standard_name">time</att>
+            <att name="units">Hour since 2017-02-06T00:00:00Z</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pr_wav_dir_surface</sourceName>
+        <destinationName>pr_wav_dir_surface</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="long_name">The angle measured clockwise from true north to the direction from which the primary waves are coming @ Ground or water surface</att>
+            <att name="units">deg</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">360.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Surface Waves</att>
+            <att name="standard_name">sea_surface_wave_from_direction</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pr_wav_per_surface</sourceName>
+        <destinationName>pr_wav_per_surface</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="long_name">The quantity of time required for two successive primary wave crests to pass a fixed point @ Ground or water surface</att>
+            <att name="units">s</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Surface Waves</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>sig_wav_ht_surface</sourceName>
+        <destinationName>sig_wav_ht_surface</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="long_name">ocean wave forecasting A fictitious wave with a height and period equal to the average height of the highest third of the actual waves that pass a fixed point @ Ground or water surface</att>
+            <att name="units">m</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Surface Waves</att>
+            <att name="standard_name">sea_surface_wave_significant_height</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+
+

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+WAF_TOPDIR='/usgs/data0/iso/iso_records'
+PYCSW_CONFIG='/opt/pycsw/default.cfg'
+
+# clear all records from the WAF
+/bin/rm -rf $WAF_TOPDIR
+
+# get ISO from THREDDS using Kyle's script
+python get_iso.py
+
+# delete all records from DB
+/opt/pycsw/bin/pycsw-admin.py -c delete_records -f $PYCSW_CONFIG -y
+
+# load all records into DB
+/opt/pycsw/bin/pycsw-admin.py -c load_records -f $PYCSW_CONFIG -p $WAF_TOPDIR -r
