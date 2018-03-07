@@ -72,3 +72,55 @@ services:
       - /opt/docker/pycsw/export:/export
       - /opt/docker/pycsw/store:/store
       - /opt/docker/pycsw/database:/database
+
+  ###
+  # ncwms:  ncWMS standalone web service
+  ###
+  
+  ncwms:
+    image: axiom/ncwms:simpledev
+    ports:
+      - "9090:8080"
+    container_name: ncwms
+    volumes:
+      - /opt/docker/ncwms/tomcat/conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - /opt/docker/ncwms/tomcat/content:/usr/local/tomcat/.ncWMS2
+  #   - /opt/docker/ncwms/ncWMS.xml:/usr/local/tomcat/conf/Catalina/localhost/ncWMS.xml
+    environment:
+      - DEFAULT_PALETTE=x-Rainbow
+  
+  
+  sci-wms:
+    image: axiom/sci-wms
+    ports:
+      - "7002:7002"
+    environment:
+      - SCIWMS_USERNAME=admin
+      - SCIWMS_PASSWORD=tailpp1
+    container_name: sci-wms
+    volumes:
+      - /opt/docker/sci-wms/topology:/srv/sci-wms/wms/topology
+      - /opt/docker/sci-wms/db:/srv/sci-wms/sciwms/db
+  
+  erddap:
+    image: axiom/docker-erddap:1.80
+    ports:
+      - "8090:8080"
+    container_name: erddap
+    volumes:
+      - /opt/docker/erddap/tomcat/conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - /opt/docker/erddap/setup.xml:/usr/local/tomcat/content/erddap/setup.xml
+      - /opt/docker/erddap/datasets.xml:/usr/local/tomcat/content/erddap/datasets.xml
+      - /opt/docker/erddap/data:/erddapData
+      - /usgs:/usgs:ro
+      - /sand:/sand:ro
+  
+  terriamap:
+    image: rsignell/terria-usgs
+    ports:
+      - "3002:3001"
+    container_name: terriamap
+    volumes:
+      - /opt/docker/terriamap/devserverconfig.json:/usr/local/app/TerriaMap/devserverconfig.json
+      - /opt/docker/terriamap/config.json:/usr/local/app/TerriaMap/wwwroot/config.json
+      - /opt/docker/terriamap/usgs.json:/usr/local/app/TerriaMap/wwwroot/init/usgs.json
