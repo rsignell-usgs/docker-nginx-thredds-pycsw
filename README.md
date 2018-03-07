@@ -1,18 +1,18 @@
-# docker-template
-### template for running ERDDAP, THREDDS, NGINX docker containers
+#  Running THREDDS, pycsw, ERDDAP, ncWMS and TerriaMap via Docker
 
-1. Setup a ubuntu or centos machine with plenty of RAM.  I used the NSF XSEDE Jetstream Atmosphere Interface to create an Ubuntu 16_04 m1.medium instance (CPU:6, Mem: 16GB, Disk: 60GB).
+1. Setup a ubuntu or centos machine with 16GB+ RAM.  
+I used the NSF XSEDE Jetstream Atmosphere Interface to create an Ubuntu 16_04 m1.medium instance (CPU:6, Mem: 16GB, Disk: 60GB).
 
 
 
-5. Get Rich Signell's Docker configuration for pycsw, thredds, erddap and nginx (with Let's Encrypt):
+2. Get Rich Signell's Docker configuration for pycsw, thredds, erddap and nginx (with Let's Encrypt):
 ```
 cd ~/github
 git clone https://github.com/rsignell-usgs/docker-nginx-thredds-pycsw.git
 mv docker-nginx-thredds-pycsw /opt/docker
 ```
 
-2. Run Julien's nice script for installing Docker and Docker-compose, and also adds your username to the docker group.
+3. Run Julien Chastang's nice script for installing Docker and Docker-compose, and also adds your username to the docker group.
 Note: this docker install script logs you off so that changes can take effect, so you need to log back in.
 
 ```
@@ -20,20 +20,20 @@ cd /opt/docker
 chmod +x docker-install.sh
 ./docker-install.sh -u rsignell
 ```
-6. Edit the Let's encrypt script, replacing the [CERTS line](https://github.com/rsignell-usgs/docker-template/blob/master/nginx/do_get#L2) with your endpoint IP (e.g. "js-169-194.jetstream-cloud.org")
+4. Edit the let's encrypt script `do_get`, replacing the [CERTS line](https://github.com/rsignell-usgs/docker-template/blob/master/nginx/do_get#L2) with your endpoint IP (e.g. "js-169-194.jetstream-cloud.org")
 ```
 cd /opt/docker
 cd nginx
 chmod +x do_get
 vi do_get
 ```
-7. After modifying the CERTS and EMAIL lines in do_get, run the container using this script:
+5. After modifying the CERTS and EMAIL lines in do_get, run the container using this script:
 ```
 ./do_get
 ```
-8. Stop the running docker container `CTRL-C bg` and then remove the docker container `docker rm -f cert`
+6. Stop the running docker container `CTRL-C bg` and then remove the docker container `docker rm -f cert`
 
-8. Grep for all the places to change the domain name
+7. Grep for all the places to change the domain name
 ```
 cd /opt/docker
 grep 'js-169-194.jetstream-cloud.org' -r *
@@ -51,18 +51,25 @@ and edit the `thredds.env` file to reflect these.
 cd /opt/docker
 vi docker-compose.yml
 ```
-10. Fire up the containers. 
+
+10. Create a data directory with a sample netcdf file
+```
+mkdir /data
+cd /data
+wget http://geoport.whoi.edu/thredds/fileServer/examples/bora_feb.nc
+```
+11. Fire up the containers. 
 ```
 cd /opt/docker
 docker-compose up -d
 ```
-11. login to the pycsw container and run `pycsw_setup`:
+12. login to the pycsw container and run `pycsw_setup`:
 ```
 docker exec -it pycsw bash
 pycsw_setup
 exit
 ```
-12. Grep for all the tomcat-user passwords to change:
+13. Grep for all the tomcat-user passwords to change:
 ```
 
 cd /opt/docker
@@ -70,16 +77,10 @@ grep 'changeme' -r *
 ```
 and edit the `tomcat-users.xml` files to enter your SHA1 passwords (can use http://www.sha1-online.com/ to generate)
 
-13. Bounce the Docker containers
+14. Bounce the Docker containers
 ```
 cd /opt/docker
 docker-compose down
 docker-compose up -d
 ```
 
-14. Create a data directory with a sample netcdf file
-```
-mkdir /data
-cd /data
-wget http://geoport.whoi.edu/thredds/fileServer/examples/bora_feb.nc
-```
