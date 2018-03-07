@@ -32,12 +32,19 @@ vi do_get
 ./do_get
 ```
 8. Stop the running docker container `CTRL-C bg` and then remove the docker container `docker rm -f cert`
+
 8. Grep for all the places to change the domain name
 ```
 cd /opt/docker
 grep 'js-169-194.jetstream-cloud.org' -r *
 ```
 and edit those, specifying your endpoint (e.g. "") 
+
+8. get your user id and the docker group id:
+```
+id
+```
+and edit the `thredds.env` file to reflect these.
 
 9. Edit docker-compose.yml and make sure it looks okay.
 ```
@@ -57,6 +64,7 @@ exit
 ```
 12. Grep for all the tomcat-user passwords to change:
 ```
+
 cd /opt/docker
 grep 'changeme' -r *
 ```
@@ -69,4 +77,9 @@ docker-compose down
 docker-compose up -d
 ```
 
-
+14. Create a data directory with a sample netcdf file
+```
+mkdir /data
+cd /data
+wget http://geoport.whoi.edu/thredds/fileServer/examples/bora_feb.nc
+```
