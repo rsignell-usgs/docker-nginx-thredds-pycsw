@@ -17,15 +17,14 @@ cd /opt/docker
 chmod +x docker-install.sh
 ./docker-install.sh -u rsignell
 ```
-4. Edit the let's encrypt script `do_get`, replacing the [CERTS line](https://github.com/rsignell-usgs/docker-template/blob/master/nginx/do_get#L2) with your endpoint IP (e.g. "js-169-194.jetstream-cloud.org")
+4. Edit the let's encrypt script `do_get`, replacing the `CERTS` and `EMAIL` with your settings.
 ```
-cd /opt/docker
-cd nginx
-chmod +x do_get
+cd /opt/docker/nginx
 vi do_get
 ```
-5. After modifying the CERTS and EMAIL lines in do_get, run the container using this script:
+5. Run the script to get your certificates.  
 ```
+chmod +x do_get
 ./do_get
 ```
 6. Stop the running docker container `CTRL-C bg` and then remove the docker container `docker rm -f cert`
