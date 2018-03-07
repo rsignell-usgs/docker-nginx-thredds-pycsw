@@ -1,9 +1,6 @@
 #  Running THREDDS, pycsw, ERDDAP, ncWMS and TerriaMap via Docker
 
-1. Setup a ubuntu or centos machine with 16GB+ RAM.  
-I used the NSF XSEDE Jetstream Atmosphere Interface to create an Ubuntu 16_04 m1.medium instance (CPU:6, Mem: 16GB, Disk: 60GB).
-
-
+1. Setup a ubuntu or centos machine with 16GB+ RAM.  I used the NSF XSEDE Jetstream Atmosphere Interface to create an Ubuntu 16_04 m1.medium instance (CPU:6, Mem: 16GB, Disk: 60GB).
 
 2. Get Rich Signell's Docker configuration for pycsw, thredds, erddap and nginx (with Let's Encrypt):
 ```
