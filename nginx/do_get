@@ -1,4 +1,4 @@
-docker run -d \
+docker run  \
     -e CERTS=js-169-194.jetstream-cloud.org \
     -e EMAIL=rsignell@usgs.gov \
     -v /opt/docker/nginx/dhparam:/etc/ssl/dhparam \
