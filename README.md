@@ -3,21 +3,22 @@
 
 1. Setup a ubuntu or centos machine with plenty of RAM.  I used the NSF XSEDE Jetstream Atmosphere Interface to create an Ubuntu 16_04 m1.medium instance (CPU:6, Mem: 16GB, Disk: 60GB).
 
-2. Ssh to the machine and run Julien's nice script for installing Docker and Docker-compose, and also adds your username to the docker group.
-```
-mkdir github
-git clone https://github.com/Unidata/xsede-jetstream.git
-cd xsede-jetstream
-chmod +x docker-install.sh
-./docker-install.sh -u rsignell
-```
-Note: the docker install script logs you off so that changes can take effect, so you need to log back in.
+
 
 5. Get Rich Signell's Docker configuration for pycsw, thredds, erddap and nginx (with Let's Encrypt):
 ```
 cd ~/github
-git clone https://github.com/rsignell-usgs/docker-template.git
-mv docker-template /opt/docker
+git clone https://github.com/rsignell-usgs/docker-nginx-thredds-pycsw.git
+mv docker-nginx-thredds-pycsw /opt/docker
+```
+
+2. Run Julien's nice script for installing Docker and Docker-compose, and also adds your username to the docker group.
+Note: this docker install script logs you off so that changes can take effect, so you need to log back in.
+
+```
+cd /opt/docker 
+chmod +x docker-install.sh
+./docker-install.sh -u rsignell
 ```
 6. Edit the Let's encrypt script, replacing the [CERTS line](https://github.com/rsignell-usgs/docker-template/blob/master/nginx/do_get#L2) with your endpoint
 ```
