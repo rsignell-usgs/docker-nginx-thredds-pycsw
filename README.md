@@ -4,9 +4,11 @@
 
 2. Get Rich Signell's Docker configuration for pycsw, thredds, erddap and nginx (with Let's Encrypt):
 ```
+mkdir github
 cd ~/github
 git clone https://github.com/rsignell-usgs/docker-nginx-thredds-pycsw.git
-mv docker-nginx-thredds-pycsw /opt/docker
+sudo mkdir /opt/docker
+sudo mv docker-nginx-thredds-pycsw /opt/docker
 ```
 
 3. Run Julien Chastang's nice script for installing Docker and Docker-compose, and also adds your username to the docker group.
@@ -15,7 +17,7 @@ Note: this docker install script logs you off so that changes can take effect, s
 ```
 cd /opt/docker 
 chmod +x docker-install.sh
-./docker-install.sh -u rsignell
+./docker-install.sh -u $USER
 ```
 4. Edit the let's encrypt script `do_get`, replacing the `CERTS` and `EMAIL` with your settings.
 ```
@@ -50,9 +52,9 @@ vi docker-compose.yml
 
 10. Create a data directory with a sample netcdf file
 ```
-mkdir /data
+sudo mkdir /data
 cd /data
-wget http://geoport.whoi.edu/thredds/fileServer/examples/bora_feb.nc
+sudo wget http://geoport.whoi.edu/thredds/fileServer/examples/bora_feb.nc
 ```
 11. Fire up the containers. 
 ```
@@ -73,7 +75,7 @@ grep 'changeme' -r *
 ```
 and edit the `tomcat-users.xml` files to enter your SHA1 passwords (can use http://www.sha1-online.com/ to generate)
 
-14. Bounce the Docker containers
+14. Stop and restart the Docker containers
 ```
 cd /opt/docker
 docker-compose down
