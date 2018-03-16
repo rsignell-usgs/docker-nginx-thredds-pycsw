@@ -40,7 +40,7 @@ and edit those, specifying your endpoint (e.g. "js-169-102.jetstream-cloud.org")
 ```
 id
 ```
-and edit the `thredds.env` file to reflect these.
+and edit the `thredds.env` file, setting `TOMCAT_USER_ID` to your user id (`uid`), and `TOMCAT_GROUP_ID` to the docker group id.
 
 9. Edit docker-compose.yml and make sure it looks okay.
 ```
