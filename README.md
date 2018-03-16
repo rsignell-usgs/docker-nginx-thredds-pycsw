@@ -27,14 +27,14 @@ vi do_get
 chmod +x do_get
 ./do_get
 ```
-6. Stop the running docker container `CTRL-C bg` and then remove the docker container `docker rm -f cert`
+6. Stop the running docker container `CTRL-Z`, then remove the docker container `docker rm -f cert`
 
 7. Grep for all the places to change the domain name
 ```
 cd /opt/docker
 grep 'js-169-194.jetstream-cloud.org' -r *
 ```
-and edit those, specifying your endpoint (e.g. "") 
+and edit those, specifying your endpoint (e.g. "js-169-102.jetstream-cloud.org") 
 
 8. get your user id and the docker group id:
 ```
