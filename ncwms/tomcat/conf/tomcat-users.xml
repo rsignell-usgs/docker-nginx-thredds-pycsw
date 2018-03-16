@@ -13,11 +13,12 @@
   <role rolename="ncWMS-admin"/>
 
   <user username="ncwms"
-        password="0585eb2625a8587f58921680c9d6a2753224a0fe"
+        password="xxxx-changeme-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         roles="ncWMS-admin"/>
 
   <user username="admin"
-        password="changeme-sha1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        
+        password="xxxx-changeme-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         roles="manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui"/>
 
 </tomcat-users>
