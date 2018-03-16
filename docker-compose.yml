@@ -38,7 +38,7 @@ services:
       - /opt/docker/nginx/conf.d/include/cors.include:/etc/nginx/conf.d/include/cors.include
     environment:
       - "CERTS=js-169-194.jetstream-cloud.org"
-      - "EMAIL=rsignell@usgs.gov"
+      - "EMAIL=changeme@changeme.com"
 
   ###
   # tds:  THREDDS Data Server- Stable
@@ -96,7 +96,7 @@ services:
       - "7002:7002"
     environment:
       - SCIWMS_USERNAME=admin
-      - SCIWMS_PASSWORD=tailpp1
+      - SCIWMS_PASSWORD=changeme
     container_name: sci-wms
     volumes:
       - /opt/docker/sci-wms/topology:/srv/sci-wms/wms/topology
